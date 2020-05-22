@@ -1944,9 +1944,11 @@ nav.fixed .top-nav li a, .fixed nav .top-nav li a {
 }
 nav.fixed .logo-white, .fixed nav .logo-white {
   display:none;
+  padding: 5px;
 }
 nav.fixed .logo-dark, .fixed nav .logo-dark {
   display:block;
+  padding: 5px;
 }
 .background-transparent {
   background: none;
@@ -2054,9 +2056,11 @@ video {
   }
   .logo img.logo-white {
     display:none;
+    padding: 5px;
   }
   .logo img.logo-dark {
     display:block;
+    padding: 5px;
   }
   .nav-text::after {
     color: #002633;

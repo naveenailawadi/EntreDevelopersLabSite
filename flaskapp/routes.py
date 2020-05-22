@@ -10,9 +10,9 @@ def home():
     return render_template('home.html')
 
 
-@app.route("/about")
-def about():
-    return render_template('about.html', title='About')
+@app.route("/tune_in")
+def tune_in():
+    return render_template('tune_in.html', title='About')
 
 
 @app.route("/contact", methods=['GET', 'POST'])
