@@ -42,14 +42,13 @@
             <li><a href="{{url_for('home')}}">Home</a></li>
             <li><a href="{{url_for('home')}}#products">Products</a></li>
             <li><a>Proprietary Technology</a>
-              <ul>
+              <ul style="background: rgba(76, 175, 80, 0)">
                 <li><a href="http://publicize.pro" target="_blank">Publicize</a>
                 </li>
                 <li><a>Tune-In</a></li>
               </ul>
             </li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="{{url_for('contact')}}">Contact</a></li>
           </ul>
         </div>
       </nav>
@@ -92,7 +91,7 @@
                   <a href="tel:+16104628711">+1 (610) 462-8711</a>
                 </div>
                 <div class="float-left">
-                  <img style="width: 48px; height: 50px;" src="{{url_for('static', filename='img/icons/telegram.svg')}}">
+                  <img class="telegram-icon" src="{{url_for('static', filename='img/icons/telegram.svg')}}">
                 </div>
                 <div class="margin-left-70">
                   <h3 class="margin-bottom-0">Telegram</h3>
