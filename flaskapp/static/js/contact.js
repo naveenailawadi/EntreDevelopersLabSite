@@ -10,7 +10,7 @@ function addEmail() {
         $.ajax({
               type: 'POST',
               // THIS WILL NEED TO BE CHANGED!!!
-              url: "http://127.0.0.1:5000/add_lead",
+              url: "http://entredeveloperslab.com/add_lead",
               data: JSON.stringify(
                 {
                     'email': email
