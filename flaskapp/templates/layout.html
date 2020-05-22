@@ -2,85 +2,120 @@
 <html>
 <head>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{{url_for('static', filename='css/components.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/icons.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/responsee.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='owl-carousel/owl.carousel.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='owl-carousel/owl.theme.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/template-style.css')}}">
+    <link href='https://fonts.googleapis.com/css?family=Playfair+Display&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="{{url_for('static', filename='js/jquery-1.8.3.min.js')}}"></script>
+    <script type="text/javascript" src="{{url_for('static', filename='js/jquery-ui.min.js')}}"></script>
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+    <link rel="icon" type="image/png" href="{{url_for('static', filename='img/basic_block_logo.png')}}">
 
     {% if title %}
-        <title>Flask Blog - {{title}}</title>
+        <title>EntreDevelopers Lab - {{title}}</title>
     {% else %}
-        <title>Flask Blog</title>
+        <title>EntreDevelopers Lab</title>
     {% endif %}
 </head>
-<body>
-    <header class="site-header">
-      <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
-        <div class="container">
-          <a class="navbar-brand mr-4" href="/">Flask Blog</a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarToggle">
-            <div class="navbar-nav mr-auto">
-              <a class="nav-item nav-link" href="{{ url_for('home') }}">Home</a>
-              <a class="nav-item nav-link" href="{{ url_for('about') }}">About</a>
-            </div>
-            <!-- Navbar Right Side -->
-            <div class="navbar-nav">
-              {% if current_user.is_authenticated %}
-              <a class="nav-item nav-link" href="{{ url_for('account') }}">{{current_user.username}}</a>
-                <a class="nav-item nav-link" href="{{ url_for('logout') }}">Logout</a>
-              {% else %}
-                <a class="nav-item nav-link" href="{{ url_for('login') }}">Login</a>
-                <a class="nav-item nav-link" href="{{ url_for('register') }}">Register</a>
-              {% endif %}
-
-            </div>
-          </div>
+<body class="size-1140">
+    <!-- HEADER -->
+    <header role="banner" class="position-absolute">
+      <!-- Top Navigation -->
+      <nav class="background-transparent background-transparent-hightlight full-width sticky">
+        <div class="s-12 l-2">
+          <a href="{{url_for('home')}}" class="logo">
+            <!-- Logo White Version -->
+            <img class="logo-white" src="{{url_for('static', filename='img/logo.png')}}" alt="">
+            <!-- Logo Dark Version -->
+            <img class="logo-dark" src="{{url_for('static', filename='img/logo-dark.png')}}" alt="">
+          </a>
+        </div>
+        <div class="top-nav s-12 l-10">
+          <p class="nav-text"></p>
+          <ul class="right chevron">
+            <li><a href="{{url_for('home')}}">Home</a></li>
+            <li><a href="{{url_for('home')}}#products">Products</a></li>
+            <li><a>Proprietary Technology</a>
+              <ul>
+                <li><a href="http://publicize.pro" target="_blank">Publicize</a>
+                </li>
+                <li><a>Tune-In</a></li>
+              </ul>
+            </li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
         </div>
       </nav>
     </header>
-    <main role="main" class="container">
-      <div class="row">
-        <div class="col-md-8">
-            {% with messages = get_flashed_messages(with_categories=true) %}
-                {% if messages %}
-                    {% for category, message in messages %}
-                        <div class="alert alert-{{ category }}">
-                            {{ message }}
-                        </div>
-                    {% endfor %}
-                {% endif %}
-            {% endwith %}
-            {% block content %}{% endblock %}
-        </div>
-        <div class="col-md-4">
-          <div class="content-section">
-            <h3>Our Sidebar</h3>
-            <p class='text-muted'>You can put any information here you'd like.
-              <ul class="list-group">
-                <li class="list-group-item list-group-item-light">Latest Posts</li>
-                <li class="list-group-item list-group-item-light">Announcements</li>
-                <li class="list-group-item list-group-item-light">Calendars</li>
-                <li class="list-group-item list-group-item-light">etc</li>
-              </ul>
-            </p>
-          </div>
-        </div>
-      </div>
+
+    <!-- MAIN -->
+    <main role="main">
+      {% block content %}{% endblock %}
+
     </main>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- FOOTER -->
+    <footer>
+
+      <!-- Main Footer -->
+      <section class="background-dark full-width">
+        <!-- Map -->
+        <div class="s-12 m-12 l-6 margin-m-bottom-2x">
+          <div class="s-12 center">
+            <img style="width: 600px;" src="{{url_for('static', filename='img/group-workspace.jpg')}}">
+          </div>
+        </div>
+
+        <!-- Collumn 2 -->
+        <div class="s-12 m-12 l-6 margin-m-bottom-2x">
+          <div class="padding-2x">
+            <div class="line">
+                <div class="float-left">
+                  <i class="icon-sli-envelope text-primary icon3x"></i>
+                </div>
+                <div class="margin-left-70 margin-bottom-30">
+                  <h3 class="margin-bottom-0">E-mail</h3>
+                  <a href="mailto:admin@entredeveloperslab.com">admin@entredeveloperslab.com</a>
+                </div>
+                <div class="float-left">
+                  <i class="icon-sli-phone text-primary icon3x"></i>
+                </div>
+                <div class="margin-left-70 margin-bottom-30">
+                  <h3 class="margin-bottom-0">Phone</h3>
+                  <a href="tel:+16104628711">+1 (610) 462-8711</a>
+                </div>
+                <div class="float-left">
+                  <img style="width: 48px; height: 50px;" src="{{url_for('static', filename='img/icons/telegram.svg')}}">
+                </div>
+                <div class="margin-left-70">
+                  <h3 class="margin-bottom-0">Telegram</h3>
+                  <p>@naveen_ailawadi</p>
+                </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <hr class="break margin-top-bottom-0" style="border-color: rgba(0, 38, 51, 0.80);">
+
+      <!-- Bottom Footer -->
+      <section class="padding background-dark full-width">
+        <div class="s-12 l-6">
+          <p class="text-size-12">Copyright 2020, EntreDevelopers Lab, Inc.</p>
+        </div>
+        <div class="s-12 l-6">
+        </div>
+      </section>
+
+    </footer>
+    <script type="text/javascript" src="{{url_for('static', filename='js/responsee.js')}}"></script>
+    <script type="text/javascript" src="{{url_for('static', filename='owl-carousel/owl.carousel.js')}}"></script>
+    <script type="text/javascript" src="{{url_for('static', filename='js/template-scripts.js')}}"></script>
   </body>
-</html>
-</body>
 </html>
