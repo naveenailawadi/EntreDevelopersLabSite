@@ -52,6 +52,7 @@
           <div class="line">
             <div class="margin">
               <!-- Contact Form -->
+              <div id="formErrors" class="s-12"></div>
               <div class="s-12 m-12 l-6">
                 <h2 class="margin-bottom-10">Send us a message</h2>
                 <form id="contactForm" name="contactForm" class="customform" method="post">
@@ -71,7 +72,7 @@
                     </div>
                   </div>
                   <div class="s-12">
-                    <input name="subject" class="subject" id="subjectField" placeholder="Subject" title="Subject" type="text" />
+                    <input name="subject" class="subject" id="subjectField" placeholder="Subject (optional)" title="Subject" type="text" />
                     <p class="subject-error form-error">Please enter the subject.</p>
                   </div>
                   <div class="s-12">
@@ -100,7 +101,7 @@
                     </template>
                   {% endraw %}
 
-                  <div class="s-12"><button class="s-12 submit-form button background-primary text-white" type="submit">Send</button></div>
+                  <div class="s-12" id="submitField"><button class="s-12 submit-form button background-primary text-white" type="submit">Send</button></div>
                 </form>
               </div>
               <div class="s-12 m-12 l-4">

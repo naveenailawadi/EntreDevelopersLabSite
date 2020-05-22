@@ -41,6 +41,15 @@ function addTextField(element)
 
 }
 
+// create a function for throwing form errors
+function throwFormError(message)
+{
+  // get the error field
+  var formErrors = $('#formErrors');
+  formErrors.empty();
+  new_error = '<p class="submission-error">' + message + '</p>'
+  formErrors.append('<p class="submission-error">Please include an email</p>');
+}
 
 // add a submission reaction
 $('#contactForm').submit(function(e) {
@@ -51,7 +60,8 @@ $('#contactForm').submit(function(e) {
   var phoneNumber = $('#phoneField').val();
   var email = $('#emailField').val();
   var subject = $('#subjectField').val();
-  var message = $('messageField').val();
+  var message = $('#messageField').val();
+  var sendable = true;
 
   // get an array of added platforms
   var addedPlatforms = $('input[label="additionalPlatform"]').map(function(i,el) {
@@ -61,11 +71,59 @@ $('#contactForm').submit(function(e) {
       username: username,
       platform: platform
     }
-
     return new_platform;
     }).get();
 
-  console.log(addedPlatforms);
+  // check a few conditions
+  if (email.length == 0)
+  {
+    sendable = false;
+    throwFormError('Please add an email.');
+  }
+
+  if (name.length == 0)
+  {
+    sendable = false;
+    throwFormError('Please add your name.');
+  }
+
+  if (message.length == 0)
+  {
+    sendable = false;
+    throwFormError('Please include a message');
+  }
+
+  if (sendable)
+  {
+    // format this with ajax to send it
+    $.ajax({
+              type: 'POST',
+              // THIS WILL NEED TO BE CHANGED!!!
+              url: "http://127.0.0.1:5000/add_lead",
+              data: JSON.stringify(
+                {
+                    name: name,
+                    email: email,
+                    phoneNumber: phoneNumber,
+                    subject: subject,
+                    message: message,
+                    additionalPlatforms: addedPlatforms
+                }),
+              success: function (response) {
+                // empty the errors
+                $('#formErrors').empty();
+
+                // empty the form
+                $('form').find("input[type=text], textarea").val("");
+
+                //submit a success message
+                $('#submitField').append('<p>Your submission has been recorded. We will contact you soon!</p>');
+              },
+              error: function () {
+                alert('Error is submitting form. Try again later.');
+              }
+        });
+  }
 
 });
 
