@@ -11,6 +11,8 @@ bcrypt = Bcrypt(app)
 
 from flaskapp import routes
 
+if __name__ == '__main__':
+    app.run()
 
 '''
 Further learning:
