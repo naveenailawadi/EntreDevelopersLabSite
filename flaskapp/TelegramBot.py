@@ -1,7 +1,7 @@
 import requests
 import telegram
 from telegram import Bot
-from jinja2 import Template
+from flask import render_template
 
 
 class Messenger:
@@ -19,9 +19,7 @@ class Messenger:
 
     def send_html(self, lead_json):
         # format the text using a jinja
-        template = Template(open('flaskapp/templates/telegram_lead.html', 'r').read())
-
-        text = template.render(information=lead_json)
+        text = render_template('telegram_lead.html', information=lead_json)
 
         self.bot.send_message(chat_id=self.chat_id,
                               text=text,

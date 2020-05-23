@@ -47,6 +47,9 @@ def add_lead():
     except KeyError:
         found_additional_platforms = False
 
+    # send it via telegram
+    messenger.send_html(request_json)
+
     # create a new lead
     new_lead = LeadModel(name=name, email=email, phone_number=phone_number, subject=subject, message=message)
 
@@ -57,8 +60,5 @@ def add_lead():
     # add it to the database
     db.session.add(new_lead)
     db.session.commit()
-
-    # send it via telegram
-    messenger.send_html(request_json)
 
     return json.dumps({'message': f"added {new_lead} to the database"}), 201
