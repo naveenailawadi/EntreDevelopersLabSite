@@ -1,0 +1,19 @@
+<h1>{{information['name']}} (EDL General Submission)</h1>
+<br>
+<!--Output the message-->
+<h3>{{information['subject']}}</h3>
+<p>{{information['message']}}</p>
+<br>
+
+<div>
+    <h6>Contact: </h6>
+    <ul>
+        <li>{{information['email']}}</li>
+        <li>{{information['phoneNumber']}}</li>
+
+        <!--Iterate through the additional ones-->
+        {% for pair in information['additionalPlatforms'] %}
+            <li>{{pair['platform']}}: {{pair['username']}}</li>
+        {% endfor $}
+    </ul>
+</div>

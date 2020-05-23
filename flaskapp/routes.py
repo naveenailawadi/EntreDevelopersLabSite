@@ -1,6 +1,8 @@
 from flask import render_template, url_for, flash, redirect, request
 from flaskapp import app
 from flaskapp.models import db, LeadModel
+from flaskapp.TelegramBot import Messenger
+from flaskapp.secrets import TELEGRAM_CHAT_ID, TELEGRAM_TOKEN
 import json
 
 
@@ -25,6 +27,7 @@ def contact():
 
 @app.route("/add_lead", methods=['GET', 'POST'])
 def add_lead():
+    messenger = Messenger(TELEGRAM_TOKEN, TELEGRAM_CHAT_ID)
     request_json = request.get_json(force=True)
 
     # do something (send via telegram eventually)
@@ -54,5 +57,8 @@ def add_lead():
     # add it to the database
     db.session.add(new_lead)
     db.session.commit()
+
+    # send it via telegram
+    messenger.send_html(request_json)
 
     return json.dumps({'message': f"added {new_lead} to the database"}), 201
