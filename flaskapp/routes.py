@@ -4,14 +4,6 @@ from flaskapp.models import db, LeadModel
 import json
 
 
-# get rid of https
-@app.before_request
-def before_request():
-    if request.url.startswith('https://'):
-        url = request.url.replace('https://', 'http://', 1)
-        return redirect(url)
-
-
 @app.route("/")
 @app.route("/services")
 @app.route("/home")
@@ -43,7 +35,7 @@ def add_lead():
         subject = request_json['subject']
         message = request_json['message']
     except KeyError:
-        return json.dumps({'message': 'Must include mandatory submissions: name, email, phoneNumber, subject, message'}), 400
+        return json.dumps({'message': 'Must include mandatory submissions: name, email, phoneNumber, subject, message'}), 401
 
     # get the optional data
     try:
