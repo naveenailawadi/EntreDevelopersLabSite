@@ -10,12 +10,12 @@ import json
 @app.route("/services")
 @app.route("/home")
 def home():
-    return render_template('home.html')
+    return render_template('home.html', home=True)
 
 
 @app.route("/tune_in")
 def tune_in():
-    return render_template('tune_in.html', title='About')
+    return render_template('tune_in.html', title='Tune-In')
 
 
 @app.route("/contact", methods=['GET', 'POST'])
