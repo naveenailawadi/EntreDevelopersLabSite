@@ -35,7 +35,7 @@ def add_lead():
         subject = request_json['subject']
         message = request_json['message']
     except KeyError:
-        return json.dumps({'message': 'Must include mandatory submissions: name, email, phoneNumber, subject, message'}), 401
+        return json.dumps({'message': 'Must include mandatory submissions: name, email, phoneNumber, subject, message'}), 400
 
     # get the optional data
     try:
