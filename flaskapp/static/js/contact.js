@@ -1,32 +1,5 @@
 let CONTACT_METHODS = ['telegram', 'discord', 'whatsapp'];
 
-function addEmail() {
-    var email_element = $('#email-footer4-f');
-    var email = email_element.val();
-
-    // add the email via ajax
-    if (email.length > 0)
-    {
-        $.ajax({
-              type: 'POST',
-              // THIS WILL NEED TO BE CHANGED!!!
-              url: "http://entredeveloperslab.com/add_lead",
-              data: JSON.stringify(
-                {
-                    'email': email
-                }),
-              success: function (response) {
-                // reset the email element
-                email_element.val('');
-                console.log(response);
-              },
-              error: function () {
-                alert('error getting data');
-              }
-        });
-    }
-}
-
 function addTextField(element)
 {
 
@@ -99,7 +72,7 @@ $('#contactForm').submit(function(e) {
     $.ajax({
               type: 'POST',
               // THIS WILL NEED TO BE CHANGED!!!
-              url: "http://127.0.0.1:5000/add_lead",
+              url: "http://entredeveloperslab.com/add_lead",
               data: JSON.stringify(
                 {
                     name: name,
