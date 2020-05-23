@@ -4,7 +4,16 @@ from flaskapp.models import db, LeadModel
 import json
 
 
+# get rid of https
+@app.before_request
+def before_request():
+    if request.url.startswith('https://'):
+        url = request.url.replace('https://', 'http://', 1)
+        return redirect(url)
+
+
 @app.route("/")
+@app.route("/services")
 @app.route("/home")
 def home():
     return render_template('home.html')
