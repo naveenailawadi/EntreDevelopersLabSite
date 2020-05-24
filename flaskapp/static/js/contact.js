@@ -72,7 +72,7 @@ $('#contactForm').submit(function(e) {
     $.ajax({
               type: 'POST',
               // THIS WILL NEED TO BE CHANGED!!!
-              url: "http://entredeveloperslab.com/add_lead",
+              url: "https://entredeveloperslab.com/add_lead",
               data: JSON.stringify(
                 {
                     name: name,
