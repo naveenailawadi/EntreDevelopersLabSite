@@ -2102,3 +2102,8 @@ p.submission-error
 {
   color: #C81010;
 }
+
+html
+{
+  scroll-behavior: smooth;
+}
