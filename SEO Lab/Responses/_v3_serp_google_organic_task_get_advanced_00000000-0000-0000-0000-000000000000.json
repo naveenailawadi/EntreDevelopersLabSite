@@ -1,0 +1,1066 @@
+{
+    "version": "0.1.20200512",
+    "status_code": 20000,
+    "status_message": "Ok.",
+    "time": "0 sec.",
+    "cost": 0,
+    "tasks_count": 1,
+    "tasks_error": 0,
+    "tasks": [
+        {
+            "id": "00000000-0000-0000-0000-000000000000",
+            "status_code": 20000,
+            "status_message": "Ok.",
+            "time": "0 sec.",
+            "cost": 0,
+            "result_count": 1,
+            "path": [
+                "v3",
+                "serp",
+                "google",
+                "organic",
+                "task_get",
+                "advanced",
+                "00000000-0000-0000-0000-000000000000"
+            ],
+            "data": {
+                "api": "serp",
+                "function": "task_get",
+                "se": "google",
+                "se_type": "organic"
+            },
+            "result": [
+                {
+                    "keyword": "pizza",
+                    "type": "organic",
+                    "se_domain": "google.co.uk",
+                    "location_code": 1006886,
+                    "language_code": "en",
+                    "check_url": "https://www.google.co.uk/search?q=pizza&num=100&hl=en&gl=GB&gws_rd=cr&ie=UTF-8&oe=UTF-8&uule=w+CAIQIFISCXXeIa8LoNhHEZkq1d1aOpZS",
+                    "datetime": "2020-05-24 13:16:26 +00:00",
+                    "spell": null,
+                    "item_types": [
+                        "paid",
+                        "organic",
+                        "top_stories",
+                        "people_also_ask",
+                        "people_also_search",
+                        "images",
+                        "knowledge_graph",
+                        "twitter",
+                        "google_reviews",
+                        "jobs",
+                        "map",
+                        "app",
+                        "local_pack",
+                        "carousel",
+                        "video",
+                        "featured_snippet",
+                        "answer_box",
+                        "shopping",
+                        "google_flights",
+                        "mention_carousel",
+                        "events",
+                        "related_searches",
+                        "multi_carousel"
+                    ],
+                    "se_results_count": 23,
+                    "items_count": 23,
+                    "items": [
+                        {
+                            "type": "paid",
+                            "rank_group": 204,
+                            "rank_absolute": 30,
+                            "position": "left",
+                            "xpath": "XPath6a5d27f4-3fc6-4dc7-9545-64b2af1bf4d4",
+                            "title": "Titlec7338fac-d1be-4d85-8f1f-cd41c0481e37",
+                            "domain": "Domain4a8ec813-3b25-4be2-a05f-469dce49ec7e",
+                            "breadcrumb": "Breadcrumb3e9548aa-ab2b-4b8d-8573-dc60dbf09f8d",
+                            "url": "Url230ed46a-d62d-4687-9ae2-c50d570d169d",
+                            "highlighted": [
+                                "34fb28d4-82b7-450d-b359-00a30f7c7317",
+                                "e0e9d7a6-8fa1-4404-b6b0-ad7a71cccb20",
+                                "6e062a36-b3e3-42d4-b55b-676f8ca5c6f9"
+                            ],
+                            "extra": {
+                                "ad_aclk": "AdAclkf4ee5e74-58d6-4ac1-ad0d-790978491955"
+                            },
+                            "description": "Snippet745ad46e-af1e-4829-9754-2157a4bf5a3a",
+                            "description_rows": [
+                                "24e6ad68-751e-4670-ac1b-dbb1d669b794",
+                                "fb294938-4119-4be5-9dfb-cf330cd11f57",
+                                "2a5e3d50-52f9-473a-8f48-6c997912fa3f"
+                            ],
+                            "links": [
+                                {
+                                    "type": "ad_link_element",
+                                    "title": "Title93e1caeb-e2a1-4691-a36f-afb725740d1c",
+                                    "description": "Snippet6fa03e2f-a38c-4ef9-8361-f239d39e8f34",
+                                    "url": "Url0d81e7d4-d713-4bc9-926d-2c9230600cb9",
+                                    "ad_aclk": "AdAclka86b8b94-b176-45a7-802b-bf80eee68c80"
+                                },
+                                {
+                                    "type": "ad_link_element",
+                                    "title": "Titlef9da2741-2ee7-45f0-b676-abed59e1a8e7",
+                                    "description": "Snippetbf138200-30e3-4eb5-b3e0-6933ad0fd1e3",
+                                    "url": "Url3396e975-42c4-4293-96a2-f7655fa96995",
+                                    "ad_aclk": "AdAclkd332fc22-8071-4034-abb4-e3732b3ef7f6"
+                                },
+                                {
+                                    "type": "ad_link_element",
+                                    "title": "Title9c7d1e91-6f64-4689-9617-ef4c0d920a47",
+                                    "description": "Snippet7cfed58c-5629-4290-8058-7ac0bb555021",
+                                    "url": "Urlf4ba9ea1-5774-4877-9b2c-491c8b3d5faf",
+                                    "ad_aclk": "AdAclka0f8b144-803e-42a1-bf5e-99a478c69c6b"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "organic",
+                            "rank_group": 194,
+                            "rank_absolute": 244,
+                            "position": "left",
+                            "xpath": "XPath16026e68-0ad6-4b5c-b109-0537aadc1b26",
+                            "domain": "Domain5a7bb702-c319-4fe6-a5e5-ddb7e0d48183",
+                            "title": "Title43732735-3083-4d1e-a6b4-783bbda4d46c",
+                            "url": "Urlfc6efbc0-eddc-42a3-be71-635c22fe6bfa",
+                            "cache_url": "CacheUrl2dca43e5-0fa1-4fa2-9715-bae251d3dc7e",
+                            "breadcrumb": "Breadcrumb9aad3e86-3ee9-4576-996a-9e47f457e411",
+                            "is_image": false,
+                            "is_video": true,
+                            "is_featured_snippet": false,
+                            "is_malicious": false,
+                            "description": "Snippet8a33cef5-69fa-4def-ae98-35525ef1cdc5",
+                            "pre_snippet": "PreSnippet80302df9-d877-4922-9be0-0f13deaf0e2e",
+                            "extended_snippet": "ExtendedSnippet8e338feb-2a0b-4504-bf63-6c9481006784",
+                            "amp_version": true,
+                            "rating": {
+                                "rating_type": "CustomMax",
+                                "value": 38,
+                                "votes_count": 233,
+                                "rating_max": 168
+                            },
+                            "highlighted": [
+                                "4e7e8f3c-67a8-41eb-8faa-ac94dbc914bc",
+                                "767f2d2a-864c-496e-add3-57100fd3586c",
+                                "a8c31744-8b6d-4801-a6a6-29dd579eb357"
+                            ],
+                            "links": [
+                                {
+                                    "type": "link_element",
+                                    "title": "Titleacc6d78b-6b4c-4ea2-af11-5b12377fd7d4",
+                                    "description": "Snippetbeb4d143-6460-44cd-9d48-560209e496a8",
+                                    "url": "Urld206bdd3-7f0d-4c69-a7fa-de873aadae67"
+                                },
+                                {
+                                    "type": "link_element",
+                                    "title": "Title85aaa704-515b-48ff-9fce-4d2091f5bc63",
+                                    "description": "Snippet74a3712c-af2d-4e6e-a5bf-3bc4136bc353",
+                                    "url": "Urlbf1db0ac-e27f-4cd4-a895-ae6bb1fe37c5"
+                                },
+                                {
+                                    "type": "link_element",
+                                    "title": "Titleb7fae774-f427-4f65-8c99-fe41ec303aa2",
+                                    "description": "Snippeta5c3778b-bf6e-4001-9b2d-78b11cc205d6",
+                                    "url": "Url9f80961e-1704-453b-a784-408fa8e3bba9"
+                                }
+                            ],
+                            "faq": {
+                                "type": "faq_box",
+                                "items": [
+                                    {
+                                        "type": "faq_box_element",
+                                        "title": "Titlec0fe4cb6-b9ea-4b3b-9745-7c20db03e55c",
+                                        "description": "Description9bbd8c1a-f77c-4250-a6d7-9103cce1360d",
+                                        "links": [
+                                            {
+                                                "type": "link_element",
+                                                "title": "Title90659250-d3d0-4304-a4b8-e5d6959ab63c",
+                                                "url": "Urldaa96439-580c-4aa6-9632-1ed0515af18d"
+                                            },
+                                            {
+                                                "type": "link_element",
+                                                "title": "Title33f210a6-7698-4371-aec5-225ff435b9c3",
+                                                "url": "Urlf9a9d5a5-cb73-4243-a96c-6f8b32d1915c"
+                                            },
+                                            {
+                                                "type": "link_element",
+                                                "title": "Titled2b25aa2-4ba2-47c1-9047-eead379a10dc",
+                                                "url": "Urla7aa93f6-8e2f-41e8-98ad-f6ab82ed2890"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "type": "faq_box_element",
+                                        "title": "Titleb966948b-9783-4974-a7e1-f27ea92717d7",
+                                        "description": "Description3d84866d-d945-4533-a48b-6b2092e81668",
+                                        "links": [
+                                            {
+                                                "type": "link_element",
+                                                "title": "Title86adba0b-87f7-4977-8851-150bc2510231",
+                                                "url": "Urlab8baaf3-4618-48f2-b028-d8fa1ddbe942"
+                                            },
+                                            {
+                                                "type": "link_element",
+                                                "title": "Title9d74ea3b-3df4-4b57-86cb-3f1b79f94b23",
+                                                "url": "Url3fbb48ba-dc3f-41b7-bb0d-0d2fe2915cc0"
+                                            },
+                                            {
+                                                "type": "link_element",
+                                                "title": "Title708d20cf-a7d2-45dd-8d3a-10ad4838d201",
+                                                "url": "Urlc017f42a-c53a-4a6a-8566-f249685933ca"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "type": "faq_box_element",
+                                        "title": "Titlec314f6d4-1409-44b9-a7a8-5faf864a43e8",
+                                        "description": "Description6d0428e1-c9be-4b76-83e4-7c5cb4127fe8",
+                                        "links": [
+                                            {
+                                                "type": "link_element",
+                                                "title": "Title703b2a79-62b4-4ded-8aca-21a622bef142",
+                                                "url": "Url2a4d6278-8772-434e-b46a-0e9846697894"
+                                            },
+                                            {
+                                                "type": "link_element",
+                                                "title": "Title3e736779-d2de-400a-bedf-c95126656c8f",
+                                                "url": "Urlf5a914c1-ac4b-4224-bc14-41e3d8febe56"
+                                            },
+                                            {
+                                                "type": "link_element",
+                                                "title": "Title7dddba8d-ad07-467a-9dc8-4de0139eadf5",
+                                                "url": "Urle8a20a46-5fc7-47e8-b878-e20828a59fae"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "type": "top_stories",
+                            "rank_group": 219,
+                            "rank_absolute": 240,
+                            "position": "left",
+                            "xpath": "XPath1bf83ba4-b309-4955-aabb-35e1af070bbe",
+                            "items": [
+                                {
+                                    "type": "top_stories_element",
+                                    "source": "Source89ca9447-0df8-40c0-a622-67e5a71ee0e1",
+                                    "domain": "Domaina8ff81ca-031c-4c41-bc40-f40bcb4e6a9a",
+                                    "title": "Title8355bc82-7a15-4393-9d77-306a07c09bfb",
+                                    "date": "Datec3f4745d-b037-486c-a442-cb707291b1af",
+                                    "url": "Urlb92a29dc-2df5-48eb-ac65-4cc7597f35d0"
+                                },
+                                {
+                                    "type": "top_stories_element",
+                                    "source": "Sourceba85ef5f-c31f-475f-9666-3d72a2b63ab0",
+                                    "domain": "Domain1fa53259-6bbd-4c38-b92e-de166aa881fc",
+                                    "title": "Title239b98e4-2eb2-4812-83f2-755b7eec3de8",
+                                    "date": "Date0e966d1e-d550-4adc-9d47-e63b89e242cb",
+                                    "url": "Urlb9c2d6c0-7354-4c7f-9a5e-12dece8a91ff"
+                                },
+                                {
+                                    "type": "top_stories_element",
+                                    "source": "Source5944c08d-8be5-46c3-9016-20cd7102378a",
+                                    "domain": "Domain392e4696-a055-417d-a45f-af2cd61d250e",
+                                    "title": "Title8896df2c-0b6e-46aa-b8a5-3f1a4fd86157",
+                                    "date": "Date1af32977-9a08-43df-8dc0-d110154dadd9",
+                                    "url": "Urld84f5461-146f-49ac-acee-1557f98bee0e"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "people_also_ask",
+                            "rank_group": 63,
+                            "rank_absolute": 103,
+                            "position": "left",
+                            "xpath": "XPath8a1c9881-c9a6-417e-8b10-ff97bc3c01f1",
+                            "items": [
+                                {
+                                    "type": "people_also_ask_element",
+                                    "title": "Titlecd199ccf-20d1-4a7e-84e4-6196a87b0dc3",
+                                    "xpath": "XPathc33d2202-bb96-43eb-b1d2-e82e299e1843",
+                                    "expanded_element": [
+                                        {
+                                            "type": "people_also_ask_expanded_element",
+                                            "featured_title": "FeaturedTitle0100b05c-e153-480f-b934-64162c991d39",
+                                            "url": "Url0f4f53bc-fa3e-4826-b84b-ca28f7250cb1",
+                                            "domain": "Domain14fbb68c-ba3a-4ea5-9c45-5e528a90848f",
+                                            "title": "Titlef756956c-2d78-4ad1-bc5d-bc5a24f61c8a",
+                                            "description": "Snippet5994d1b9-beb5-4eca-835b-d7dac101a352",
+                                            "table": {
+                                                "table_header": [
+                                                    "502dd962-3c99-4e9a-b61a-216d6bd32ab9",
+                                                    "56e8f0ef-10dc-45ed-b7d3-ba92162b4786",
+                                                    "8a42186b-f338-4492-9bcc-4882443fd74e"
+                                                ],
+                                                "table_content": [
+                                                    [
+                                                        "c9088d60-fc50-41ac-a539-709eaa60466c",
+                                                        "86b58225-6bfd-455a-ab1c-2a4b02e9a8ae",
+                                                        "80cb9997-797f-4c68-9032-9ae38ad2d2da"
+                                                    ],
+                                                    [
+                                                        "e6b1e0f9-7cae-4af8-8753-9f22de62e462",
+                                                        "96d2e7f0-f6cb-4949-acf3-eb29064e6b59",
+                                                        "3d8fa79f-c4da-4d91-a3c6-42e8268d0b3b"
+                                                    ],
+                                                    [
+                                                        "938e1540-ff6b-43d0-b03d-13f08b6d5e94",
+                                                        "a21fad1e-0995-49d0-adff-2b194ffb4709",
+                                                        "c3991d83-a428-4e83-a93a-dfd592d6a526"
+                                                    ]
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "people_also_ask_element",
+                                    "title": "Title92dcb979-0e57-4985-8bcc-3630351c42a1",
+                                    "xpath": "XPath35d95843-63ca-423a-858e-450ce07a5cec",
+                                    "expanded_element": [
+                                        {
+                                            "type": "people_also_ask_expanded_element",
+                                            "featured_title": "FeaturedTitle742788cb-0182-4704-aab9-6d3ba4646398",
+                                            "url": "Urld2a0f693-7dd3-4bfd-a829-8eca8716c414",
+                                            "domain": "Domain40185a94-34c8-415c-bc9f-b1d435b4077d",
+                                            "title": "Titlee4e062b5-55ac-4e16-91a8-a709ff84bec1",
+                                            "description": "Snippet1efaa8e5-2763-4c1f-b496-a7602d56c2bc",
+                                            "table": {
+                                                "table_header": [
+                                                    "c7370d6d-30fa-4554-b3b4-dd453670fa38",
+                                                    "3064b95f-9589-48ec-bb06-2fefe562ce79",
+                                                    "b031b6e3-7c1c-4ad5-b7fc-4ead315c24e3"
+                                                ],
+                                                "table_content": [
+                                                    [
+                                                        "a29df891-9058-4619-ac97-24a0b4caf951",
+                                                        "b07d8f19-6109-4bd7-9755-64dd1269b3ea",
+                                                        "b586e918-2495-40dc-b790-cb1aa19ec0e1"
+                                                    ],
+                                                    [
+                                                        "8ff13723-3c00-4c94-8739-c074b4893ab0",
+                                                        "b7a95c55-66cc-49a0-97a7-f2826ad41459",
+                                                        "251f0d14-bbd2-4393-844c-e2d4628c2b9f"
+                                                    ],
+                                                    [
+                                                        "970550ef-dd51-4100-9fd3-f7f33bbdac37",
+                                                        "f2a8d1ab-23e6-4ada-bc99-7c8154af7ca0",
+                                                        "a6f37124-0cff-404a-8d1d-2793b6b168a7"
+                                                    ]
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "people_also_ask_element",
+                                    "title": "Title1d378e65-a1b2-409f-8b04-e688c84c2022",
+                                    "xpath": "XPath3f89a1e2-9e72-4d0d-b21a-b730397bd670",
+                                    "expanded_element": [
+                                        {
+                                            "type": "people_also_ask_expanded_element",
+                                            "featured_title": "FeaturedTitle3d6c6078-596d-4669-88b6-a95e9f1aad27",
+                                            "url": "Url19eca41a-c441-4bec-bfa6-b30fca652e83",
+                                            "domain": "Domain443f1378-482f-4327-9eae-14d46c3da121",
+                                            "title": "Title38fb9084-b001-4a86-8434-e8aa1e2267fe",
+                                            "description": "Snippetbadeae2a-241b-479c-9e05-ebac38e2e881",
+                                            "table": {
+                                                "table_header": [
+                                                    "d5f1f6af-87a0-4afc-9470-9532e191bbd1",
+                                                    "6405a02d-4dfc-4e86-9de2-d6d985a74ae0",
+                                                    "8e78c40d-3336-469b-a6c6-c0a0df3849ec"
+                                                ],
+                                                "table_content": [
+                                                    [
+                                                        "8e802101-2255-4b42-acc1-6ee7641df610",
+                                                        "f683dc12-6b5e-4b3a-b158-b8e695c96775",
+                                                        "b0d1af66-89ce-4d45-9ac3-ac3f373a9d50"
+                                                    ],
+                                                    [
+                                                        "03668b9c-c998-414d-8950-3e260f1f821f",
+                                                        "c9c419d8-0953-467b-a951-a91935c9e28c",
+                                                        "6a578031-4bc6-42eb-8a5b-74aa11226afc"
+                                                    ],
+                                                    [
+                                                        "1836c094-3a5f-4993-bd35-c30e09262ef5",
+                                                        "e7d45d3d-9b19-4ce5-b61b-c332fea5cbcc",
+                                                        "f4065bbc-6462-4d52-ade1-e228eaee8121"
+                                                    ]
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "people_also_search",
+                            "rank_group": 208,
+                            "rank_absolute": 21,
+                            "position": "right",
+                            "xpath": "XPathe1814ed6-ef41-455d-868e-87d22bf1ac10",
+                            "title": "Title642ea632-ad51-4dbc-b64a-dd92763511e5",
+                            "items": [
+                                "187ed27a-8dd3-4171-90fa-1ff96bc1c4ae",
+                                "13c42e96-f1fd-422f-95f4-923e622d1bfd",
+                                "7a2977f8-0d2d-4b6e-bf21-97c8d7407e05"
+                            ]
+                        },
+                        {
+                            "type": "images",
+                            "rank_group": 46,
+                            "rank_absolute": 19,
+                            "position": "right",
+                            "xpath": "XPath2cfaaabd-436e-4ddd-8e73-0bcf9ad7bce7",
+                            "title": "Titlea08662df-5225-4f92-9c5f-63a8422955d2",
+                            "url": "Url13ccfc5d-39bd-4852-891b-5bb5b3fe3ad0",
+                            "items": [
+                                {
+                                    "type": "images_element",
+                                    "alt": "Alt0db5143a-1c1c-4073-8a98-ad3384666674",
+                                    "url": "Url9ac63098-2b2a-4f98-8ba5-743c399adca1"
+                                },
+                                {
+                                    "type": "images_element",
+                                    "alt": "Alt65577a08-7d05-4f45-bd66-02b27f6e0412",
+                                    "url": "Url65fc5648-1573-4942-b976-218363521da9"
+                                },
+                                {
+                                    "type": "images_element",
+                                    "alt": "Alt4da2e3da-4250-4212-b4d6-2c485cf4794e",
+                                    "url": "Urlff2d137f-6ab9-4e0e-9283-e7467419616b"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "knowledge_graph",
+                            "rank_group": 27943,
+                            "rank_absolute": 11556,
+                            "position": "left",
+                            "xpath": "XPath0e3f7c61-7a9e-4f6d-9d31-379b0e31787b",
+                            "title": "Title717ed40f-073c-444a-ad07-efbc3d44a31e",
+                            "sub_title": "Subtitlea52bb46e-3118-4b32-8f6b-1b19f3c420ef",
+                            "description": "Description5c6e19b9-cccb-4059-9598-833781c76697",
+                            "card_id": "CardId4c3ea028-6398-4775-9bf2-880abd7e8236",
+                            "url": "Urlbaf5b454-3ff4-4b99-8035-c509a81a7d04",
+                            "items": [
+                                {
+                                    "type": "knowledge_graph_part_element",
+                                    "text": "Textc2f02e40-f3f9-4d24-a5ed-dca9e0c8254c",
+                                    "anchor": "Anchor5b011486-6a9f-438c-9850-291f1c950f2c",
+                                    "url": "Url38789026-bfa6-4fa0-aa62-8df2c69d5da0",
+                                    "links": [
+                                        {
+                                            "type": "link_element",
+                                            "title": "Titlebc4ba59b-bf15-4f3e-a93f-fe5d317c30cb",
+                                            "description": "Snippetbc1b1c92-b564-44a9-9b76-790444bdccfd",
+                                            "url": "Url1d285265-b423-40ed-8c37-8d8ebcd8f47c"
+                                        },
+                                        {
+                                            "type": "link_element",
+                                            "title": "Titlea0d5d6f0-c3ca-47d1-bd93-5a878810416c",
+                                            "description": "Snippetd7dbaac1-5184-42b5-9231-7cbea5b48546",
+                                            "url": "Url9087b52b-645b-4623-acfe-9734982d88e1"
+                                        },
+                                        {
+                                            "type": "link_element",
+                                            "title": "Title87a636b6-745f-442c-9357-dc44e1aa9449",
+                                            "description": "Snippetbd66bf2d-5f69-4362-83a9-9fba309598f0",
+                                            "url": "Urld13f19e2-93f1-421c-ad9e-f4ef2fe7311d"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "knowledge_graph_part_element",
+                                    "text": "Text0eaeb91b-19b3-4594-acc1-c88f9d7a4dc5",
+                                    "anchor": "Anchor05e52fbf-55e6-482a-a461-824468f4caea",
+                                    "url": "Url29cc22ce-f6fe-4b1c-9997-581121bfb56c",
+                                    "links": [
+                                        {
+                                            "type": "link_element",
+                                            "title": "Titlebb0aa501-a7a1-42c1-a2d7-7a29a513b909",
+                                            "description": "Snippeta8b32808-9812-4579-9bfe-6fbea4273c84",
+                                            "url": "Url971aa916-3f92-4560-bdcd-de581447e245"
+                                        },
+                                        {
+                                            "type": "link_element",
+                                            "title": "Titlec1fba533-1e72-4e2c-ac6d-5f8c1fd04398",
+                                            "description": "Snippet8d7f2e47-9d10-4512-9b97-10eda0f46390",
+                                            "url": "Url4cb8f390-0ddc-4915-a6bc-c5670afffadf"
+                                        },
+                                        {
+                                            "type": "link_element",
+                                            "title": "Title1efd28ee-ee6d-4723-914d-5a907893de1b",
+                                            "description": "Snippet8378a94d-32b2-43c8-9eff-e7377fc0c409",
+                                            "url": "Urlede3c33f-6b0e-42b5-9071-fe232aee8d21"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "knowledge_graph_part_element",
+                                    "text": "Textcb10ed56-40d0-40fb-ad6e-6fc03bca4408",
+                                    "anchor": "Anchor5437fa01-2d99-4a6c-bd77-a5fd8164c85b",
+                                    "url": "Url7e9381ff-60bc-4e9f-8d0e-89eb7f0d9200",
+                                    "links": [
+                                        {
+                                            "type": "link_element",
+                                            "title": "Title934446e0-8fa4-49cd-ab94-5bfc1028b130",
+                                            "description": "Snippet7ca25a1b-73a5-4d26-9066-b6ae80d45e5a",
+                                            "url": "Url4414bceb-72f0-4745-ba72-e3233a836dac"
+                                        },
+                                        {
+                                            "type": "link_element",
+                                            "title": "Title96f712d6-91cc-44a0-9b78-4a5a6bb06337",
+                                            "description": "Snippet1f031460-a5f6-4b6f-ab40-0c316c8b3c1c",
+                                            "url": "Url260a01bb-db61-4ff7-a80f-6ddc8e35bbde"
+                                        },
+                                        {
+                                            "type": "link_element",
+                                            "title": "Titlecce8aed4-3d45-4337-9a47-f010aea48b21",
+                                            "description": "Snippet2be12187-348f-4faf-9ad8-c7d0dbc53815",
+                                            "url": "Urlbca30709-a34a-47f2-899f-45509ddf436b"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "twitter",
+                            "rank_group": 4896,
+                            "rank_absolute": 25038,
+                            "position": "left",
+                            "xpath": "XPath3ef55fe9-eedc-4cdb-b62e-87b635c1627a",
+                            "title": "Title6ddd94bb-ee4f-4eb7-a3a3-d524262197db",
+                            "url": "Urlaa1be313-ebc2-49ec-9dcb-65098e247d35",
+                            "items": [
+                                {
+                                    "type": "twitter_element",
+                                    "tweet": "Tweetdc99adcc-09a3-467d-8f4a-28a1b0571f40",
+                                    "date": "Date2f3788b5-465d-4d92-acf0-abf62e3cb308",
+                                    "url": "Url34c4cb98-64d2-4f40-8b98-3c38da2e2e44"
+                                },
+                                {
+                                    "type": "twitter_element",
+                                    "tweet": "Tweetf94b7792-4f84-4546-965f-23893aae8ef1",
+                                    "date": "Datecbda9c50-062b-4092-a9ba-a0aef1714070",
+                                    "url": "Urle6579c3a-0e9f-4a04-bc28-5db5149d23a2"
+                                },
+                                {
+                                    "type": "twitter_element",
+                                    "tweet": "Tweet2e376de3-8861-4513-9963-5a46fd59f8d5",
+                                    "date": "Date37fa95f5-0cf5-47fc-9779-bd3b9c163e7d",
+                                    "url": "Url2d03e6f9-7bfa-4a7a-849e-db96f418d556"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "google_reviews",
+                            "rank_group": 30977,
+                            "rank_absolute": 7586,
+                            "position": "left",
+                            "xpath": "XPath7b3b37af-059c-464f-96c9-946875b03ca3",
+                            "reviews_count": 8121,
+                            "place_id": "PlaceIdd853de87-1738-4a41-9e04-82d01fabb7c4",
+                            "feature": "Feature56bd12ce-ecb4-4114-af5a-c522d4926b23"
+                        },
+                        {
+                            "type": "jobs",
+                            "rank_group": 24059,
+                            "rank_absolute": 16650,
+                            "position": "left",
+                            "xpath": "XPath8512c42d-ed83-4f87-a8da-cc167c8f5bcd",
+                            "title": "Titledbccceba-ea7c-42de-916a-eff4ef51b4b3",
+                            "url": "Urldbfeda4a-3392-4b24-b7c6-1774b12c227a",
+                            "items": [
+                                {
+                                    "type": "jobs_element",
+                                    "title": "Title311d2da1-2439-4700-ad81-5dc12e9ec7c3",
+                                    "description": "Snippet46db5fa8-224d-4959-b2c3-ed38df2299a5",
+                                    "author": "Authorc8e6bd25-5c61-472e-af9c-a6fbc559c1fc",
+                                    "job_posted_time": "JobPostedTime8b5a5fb5-f1fe-4374-815f-8be920c5a233",
+                                    "contract_type": "ContractTypeb0805d39-f579-41ac-b678-3306b7296ebe",
+                                    "salary": "Salary8139d00b-4826-42ac-bfdc-5ed32158362b",
+                                    "url": "Url487d1e37-89ea-4bbd-a716-cc19fb27a707"
+                                },
+                                {
+                                    "type": "jobs_element",
+                                    "title": "Title59b5ba98-aced-450c-b4de-ad7cf9c932b8",
+                                    "description": "Snippet785709c4-273e-490e-8bce-5a2df1e7a094",
+                                    "author": "Author932dc502-2189-45cf-b596-762da3429642",
+                                    "job_posted_time": "JobPostedTime73314c7e-b4f9-4366-a23a-80cd9eb5df3d",
+                                    "contract_type": "ContractTypef23900b2-052e-46af-ab1f-8d867c05e248",
+                                    "salary": "Salary63f3fc51-4518-4d24-8a20-1e3521ffc613",
+                                    "url": "Urlec6eef36-b108-47c1-a3d4-66a2c867be89"
+                                },
+                                {
+                                    "type": "jobs_element",
+                                    "title": "Titlef8b3560b-92ac-4b81-a90f-b058a270d7f9",
+                                    "description": "Snippet6416116d-0df8-4bcd-9c17-49c9826c4502",
+                                    "author": "Authordd1cbff5-79a4-4584-b6e1-0bc3e36b905c",
+                                    "job_posted_time": "JobPostedTime1b5a32b2-92f4-4691-8a48-03daf991a9cd",
+                                    "contract_type": "ContractTypebafec95f-3098-44e2-a26c-5d79d212d675",
+                                    "salary": "Salary48d1f12a-5418-4034-ab5d-9b00c041cfb8",
+                                    "url": "Url86a0a599-1d9e-4b27-987d-a4fc074dbde7"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "map",
+                            "rank_group": 31428,
+                            "rank_absolute": 28150,
+                            "position": "right",
+                            "xpath": "XPath6ebca6cb-013a-43a6-8efb-41551b92b7c9",
+                            "title": "Title1f8b60ba-3f00-47a3-ae02-ca55ddac299e",
+                            "url": "Urlbc60a43e-87a9-4525-8ab1-4472b7a1cda7"
+                        },
+                        {
+                            "type": "app",
+                            "rank_group": 24703,
+                            "rank_absolute": 29408,
+                            "position": "right",
+                            "xpath": "XPathae9ec37b-95b7-40fd-a91f-15735d67c9cf",
+                            "items": [
+                                {
+                                    "type": "app_element",
+                                    "title": "Title9c052d20-fc65-443f-b254-4c280c2611d7",
+                                    "description": "Snippetfebc5d44-0a72-49d7-8163-3acf5f5621f9",
+                                    "url": "Url40c71544-f863-4dbd-9d29-f7753d8fdb07",
+                                    "price": "Price3313b54e-52db-4216-b853-e0f472723008"
+                                },
+                                {
+                                    "type": "app_element",
+                                    "title": "Title84af2f07-ed11-4bdd-92cb-d416ec70c2c5",
+                                    "description": "Snippet9425891e-4de9-4676-9808-a3b8e1833cd8",
+                                    "url": "Url9fffc4d8-fe8c-4f54-80ef-2e8ffd48644a",
+                                    "price": "Priced3caaa8f-24f4-44f8-9baa-23e625a5017f"
+                                },
+                                {
+                                    "type": "app_element",
+                                    "title": "Title2c1b2611-be69-4d15-b4d3-2790c2e4ecad",
+                                    "description": "Snippet32e34c10-2b7d-4a42-b728-3526ea01d83b",
+                                    "url": "Url5e3f9e6d-9d20-4dc0-8911-8bab1aba8acf",
+                                    "price": "Pricec34c157d-7105-4d4c-9487-9d8245142147"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "local_pack",
+                            "rank_group": 32516,
+                            "rank_absolute": 11087,
+                            "position": "right",
+                            "xpath": "XPatheb222ee0-847d-45de-b4e1-271cf03e51fe",
+                            "title": "Title2d89925e-1290-4575-ac63-de5803a8b58f",
+                            "description": "Snippet7bf34164-363d-47bd-b9d0-e4ecda04a30b",
+                            "domain": "Domainbcd9899d-7de2-44fa-b66f-43e686adde2c",
+                            "phone": "Phone8abc6e62-1d5f-46ad-a1c5-8e5b26ec7813",
+                            "url": "Url0cf21cf8-254c-4b96-b51e-6959891458ff",
+                            "is_paid": true,
+                            "rating": {
+                                "rating_type": "Percents",
+                                "value": 11162,
+                                "votes_count": 23929,
+                                "rating_max": 17958
+                            }
+                        },
+                        {
+                            "type": "carousel",
+                            "rank_group": 31989,
+                            "rank_absolute": 21525,
+                            "position": "right",
+                            "xpath": "XPath3950871c-91aa-48e2-aee8-b90a0348d07f",
+                            "title": "Title65c4cf5c-4767-4977-83ff-1f518b1e257a",
+                            "items": [
+                                {
+                                    "type": "carousel_element",
+                                    "title": "Title8f68345a-1486-4df5-9c06-c2c62a26c062",
+                                    "sub_title": "SubTitle08f56c5a-7958-42dc-9703-175dacd1fa10"
+                                },
+                                {
+                                    "type": "carousel_element",
+                                    "title": "Title163442ee-922b-4a2c-a960-8ca4ab0f79c0",
+                                    "sub_title": "SubTitle76ac9480-706a-40d8-a2e2-b632e3466c27"
+                                },
+                                {
+                                    "type": "carousel_element",
+                                    "title": "Titlecd689a3e-a522-46b2-b71b-07635e93f275",
+                                    "sub_title": "SubTitle7941e94c-a72b-417b-b7af-dabe27ff36d2"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "video",
+                            "rank_group": 3729,
+                            "rank_absolute": 19936,
+                            "position": "right",
+                            "xpath": "XPath03b0ca75-39e4-4b1f-a72a-174f23fed16a",
+                            "items": [
+                                {
+                                    "type": "video_element",
+                                    "source": "Sourcea524362c-1740-4586-82a7-8702af9024b1",
+                                    "title": "Titlec59ecabc-896d-48ae-b226-9e1d264bbb67",
+                                    "url": "Url25e2b58f-3511-4f71-b329-13d3aa82b3bc"
+                                },
+                                {
+                                    "type": "video_element",
+                                    "source": "Source843b758f-6752-44bf-99d6-8dc3806df96b",
+                                    "title": "Title51c2580b-15bb-499f-a19a-d8cca90629e5",
+                                    "url": "Url9da11ede-df11-4582-9bca-1291d3f25e60"
+                                },
+                                {
+                                    "type": "video_element",
+                                    "source": "Source624f6207-4632-40ca-bc08-276c855a5140",
+                                    "title": "Title242237a6-66fb-4073-8368-cf3ce92c5081",
+                                    "url": "Urldd485e2f-6df9-49d4-8a3d-cc5dd0e048fa"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "featured_snippet",
+                            "rank_group": 18598,
+                            "rank_absolute": 9163,
+                            "position": "right",
+                            "xpath": "XPath74d48efc-203b-415b-ae8f-fd642374859b",
+                            "domain": "Domain90a4695a-2045-44b6-b63b-c6ec51bb979a",
+                            "title": "Titleb9714777-8c74-499d-92f2-163f40d2d280",
+                            "featured_title": "FeaturedTitlecda7c9df-c5c6-406c-b326-94b04d953c2a",
+                            "description": "Snippet90a5af6f-7515-4488-bb4b-8e6d6e402a93",
+                            "url": "Urlb192d22e-7d5e-45e5-99f0-d64a85c3af7f",
+                            "table": {
+                                "table_header": [
+                                    "6068c7d4-b4e9-4c41-856a-c3e70025505c",
+                                    "6d12d9f2-10a6-4e82-b8ef-66764a8443f9",
+                                    "dc60e705-bdac-4ffd-a972-c258c716a1c8"
+                                ],
+                                "table_content": [
+                                    [
+                                        "176ece13-0bd0-4471-8f3f-f90a7ed30229",
+                                        "0bbbe269-eeda-41de-8165-b66234a1d136",
+                                        "91e499bc-46b8-47f0-a034-e60e5b12d64c"
+                                    ],
+                                    [
+                                        "9d10a952-bd8e-48f8-8682-aed6bce53682",
+                                        "93d3ebb1-f8e7-4981-ae13-ec5c925bb88b",
+                                        "3eefdf7d-cc01-4edd-aa97-1e9cda25b658"
+                                    ],
+                                    [
+                                        "c139f0fa-b11d-4794-94b3-0ef476d1b4f7",
+                                        "51eca577-2488-4da6-b639-2a2889f5b9e7",
+                                        "0840a79c-ee7a-486d-a941-a32eee98c0ab"
+                                    ]
+                                ]
+                            }
+                        },
+                        {
+                            "type": "answer_box",
+                            "rank_group": 29900,
+                            "rank_absolute": 17744,
+                            "position": "right",
+                            "xpath": "XPath86d5c579-b9d4-477b-94bd-ffc19018b078",
+                            "text": [
+                                "16f0febd-bc9f-4eb3-adf6-c3e7768e258e",
+                                "bedbbdba-ae40-4d42-9a5a-04693b5630ca",
+                                "9441aa9d-4d5a-4d35-81e7-3782668e9039"
+                            ],
+                            "links": [
+                                {
+                                    "type": "link_element",
+                                    "title": "Title7263f3ca-20cd-475b-b288-3f864e523dc8",
+                                    "description": "Snippet910c1cef-920e-413d-9b69-6456d9795008",
+                                    "url": "Urle36ec05c-420e-48cc-b085-30421398f479"
+                                },
+                                {
+                                    "type": "link_element",
+                                    "title": "Title0c31cad1-2843-4a34-9403-7c127604b29a",
+                                    "description": "Snippetada9c350-2fdc-4738-ad04-661e5cdcea2c",
+                                    "url": "Url9129f4da-5be4-4ce7-876c-a601d2c433ab"
+                                },
+                                {
+                                    "type": "link_element",
+                                    "title": "Title11ed9553-b4a2-4100-a7c1-4d07782aad69",
+                                    "description": "Snippetc6ff19b0-94de-4171-a23e-85dd65a2cb25",
+                                    "url": "Url49e29e8b-5d83-41ef-9f4f-15a990c6728a"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "shopping",
+                            "rank_group": 2547,
+                            "rank_absolute": 24343,
+                            "position": "right",
+                            "xpath": "XPathccc971ea-224b-4788-b146-76154368d65c",
+                            "title": "Titlee13a3a15-6afa-4cdb-ab0c-bbd4e0d05f1b",
+                            "items": [
+                                {
+                                    "type": "shopping_element",
+                                    "title": "Titled65a5f2f-6d83-497d-bd93-be53a4cf8b85",
+                                    "price": "Price2d2878fd-f6a6-474a-9d4a-ba5866f70c84",
+                                    "source": "Source49bc3fa5-4aae-4da8-a4ef-d17e1d68a636",
+                                    "description": "Snippet13b0f5ee-3ffd-4adb-afe4-ee71433a12d0",
+                                    "marketplace": "Marketplace57fa7ef1-1c08-49c2-8b2a-7e7b31af6161",
+                                    "marketplace_url": "MarketplaceUrld3adc1d1-399f-464f-b38e-771fc9c41fc0",
+                                    "url": "Urlccd65f57-2f81-4a79-aa48-e5e7e67e646c"
+                                },
+                                {
+                                    "type": "shopping_element",
+                                    "title": "Title10bb7665-8b79-4db5-87b8-034cc7ad7262",
+                                    "price": "Price6fa9b5ce-b1b3-41e4-b456-c34228f878d2",
+                                    "source": "Source6fd3798c-d4a1-49ba-ad1a-8c941bfdb481",
+                                    "description": "Snippet1adae662-f09e-4e9a-bb66-43260e96d4ae",
+                                    "marketplace": "Marketplace231fec63-cddb-42f4-9124-f1a87eb9f26a",
+                                    "marketplace_url": "MarketplaceUrl8cfe46f8-c2f5-4c80-88df-e4623492d1ec",
+                                    "url": "Url74adddbb-62ad-4dee-9f34-5a27477cdabd"
+                                },
+                                {
+                                    "type": "shopping_element",
+                                    "title": "Titleb307f252-b165-4001-871a-3d2f2e5507d9",
+                                    "price": "Pricec3dab910-e762-42b8-a97e-8aaf40e589d9",
+                                    "source": "Sourcee6fe6397-24c3-48f9-84ad-615659b4223e",
+                                    "description": "Snippetfa05af14-6d3f-4c4f-a4c0-22c34e7ff88b",
+                                    "marketplace": "Marketplaced8dea023-8d5b-4482-82ba-865db4472502",
+                                    "marketplace_url": "MarketplaceUrl2a4de103-670b-4268-b1c1-9bc0407e4af5",
+                                    "url": "Url349a50da-ad7c-4ed1-9932-252004b9e681"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "google_flights",
+                            "rank_group": 1889,
+                            "rank_absolute": 10891,
+                            "position": "right",
+                            "xpath": "XPathb3994166-fb63-4f5b-aea3-f7f93facb3fa",
+                            "title": "Titled70be6bb-0902-40d2-92f5-9bba1d916da9",
+                            "url": "Url616dbffe-ebcd-45a0-be24-9dbc5b144528",
+                            "items": [
+                                {
+                                    "type": "google_flights_element",
+                                    "description": "Description361f7e00-90e4-43cc-ac24-7bc904ce4251",
+                                    "url": "Url90968048-2c2c-42d7-a9e0-80dae5c4b2d6"
+                                },
+                                {
+                                    "type": "google_flights_element",
+                                    "description": "Descriptiona026773e-b962-4d80-b699-0d9f7d5980c3",
+                                    "url": "Url619d6fa4-6504-4691-b43c-4fc1baf58d0b"
+                                },
+                                {
+                                    "type": "google_flights_element",
+                                    "description": "Description7c238333-a3a8-43c6-8170-8c2408a23130",
+                                    "url": "Url7abb3d04-8cd2-4376-9be9-ad396b8b26b2"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "mention_carousel",
+                            "rank_group": 23652,
+                            "rank_absolute": 9323,
+                            "position": "right",
+                            "xpath": "XPath66df0aab-9166-4394-a1c4-3881a0da1989",
+                            "title": "Title0559e528-6d19-4cce-a386-ae3e0a1eb85d",
+                            "items": [
+                                {
+                                    "type": "mention_carousel_element",
+                                    "title": "Title95d5852c-918e-406d-9f65-f90a6a1456ff",
+                                    "price": "Price1c9ff0fd-105e-441e-a474-8b947b73b238",
+                                    "rating": {
+                                        "rating_type": "CustomMax",
+                                        "value": 29445,
+                                        "votes_count": 26208,
+                                        "rating_max": 5395
+                                    },
+                                    "mentioned_in": [
+                                        {
+                                            "type": "link_element",
+                                            "title": "Title408a888e-d186-4973-9634-b0941e279fe1",
+                                            "snippet": "Snippete83e5431-13a6-4062-bdcf-af4c95067f05",
+                                            "url": "Url920af98c-5198-4d24-8889-5045fd97dbcc"
+                                        },
+                                        {
+                                            "type": "link_element",
+                                            "title": "Title37af5978-8b16-4484-9726-5a4d50215382",
+                                            "snippet": "Snippetf72b4424-0236-4314-85f1-3644187abaf4",
+                                            "url": "Url17ee9b93-481f-45dc-80fa-fa0f694e29a4"
+                                        },
+                                        {
+                                            "type": "link_element",
+                                            "title": "Title329e4ba7-bd62-4055-9f29-5f2ed36f3380",
+                                            "snippet": "Snippetbc3c58a9-b451-40b4-8eda-5e3417a821e7",
+                                            "url": "Url4fa53b65-a18a-4fc2-979c-1e64e60ab00f"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "mention_carousel_element",
+                                    "title": "Title794c2886-1866-49d1-9d01-605527969959",
+                                    "price": "Price87e609cf-5390-484e-b3b9-04e38db35ed7",
+                                    "rating": {
+                                        "rating_type": "Max5",
+                                        "value": 13068,
+                                        "votes_count": 2777,
+                                        "rating_max": 1178
+                                    },
+                                    "mentioned_in": [
+                                        {
+                                            "type": "link_element",
+                                            "title": "Titleda1deb13-7dca-4ee3-ab70-cd3bb0470182",
+                                            "snippet": "Snippet283a363f-91ca-45eb-a45a-1f71719edabe",
+                                            "url": "Urlf72c58f1-ae37-4199-9be6-2f8f3f1e49a8"
+                                        },
+                                        {
+                                            "type": "link_element",
+                                            "title": "Title2b89f841-ec52-42ce-b9de-c967ecb30d35",
+                                            "snippet": "Snippet17191e99-2ab6-4d8f-b1d3-466717f56b6e",
+                                            "url": "Url8318b890-c2e4-4f65-8e16-c93d8e82f32b"
+                                        },
+                                        {
+                                            "type": "link_element",
+                                            "title": "Title784ca39f-f1d7-4c4b-b93b-f5b6d963785b",
+                                            "snippet": "Snippetc6efde08-6ff1-47b0-85d9-4458c384bbab",
+                                            "url": "Urla4cb1eaf-c499-46d4-941c-309a3a8ddd1f"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "mention_carousel_element",
+                                    "title": "Title8f794916-15e4-4de5-ae36-af2b7d58829d",
+                                    "price": "Pricef9b3b228-3fdc-4b37-9a76-5f298c675fb8",
+                                    "rating": {
+                                        "rating_type": "Percents",
+                                        "value": 1685,
+                                        "votes_count": 23774,
+                                        "rating_max": 16266
+                                    },
+                                    "mentioned_in": [
+                                        {
+                                            "type": "link_element",
+                                            "title": "Title045fd1e2-a38a-43c0-be3e-a1dc11bd51bd",
+                                            "snippet": "Snippetb0f14232-bdeb-4079-9ffc-c4eefa3dab8e",
+                                            "url": "Urle35c1433-b7a2-44c2-beb5-98856398b19c"
+                                        },
+                                        {
+                                            "type": "link_element",
+                                            "title": "Title0d3a688f-8309-4ec5-a0df-6f43025847b2",
+                                            "snippet": "Snippeta0356f93-5b7e-4698-8d18-fd89c41671bf",
+                                            "url": "Urle263d550-5cb2-4cef-b146-808c2073b3d6"
+                                        },
+                                        {
+                                            "type": "link_element",
+                                            "title": "Title2ad058ef-7210-47b2-b98a-13b5ab0eff83",
+                                            "snippet": "Snippet2d8359f4-f6e7-41b4-aa53-698114b9acb4",
+                                            "url": "Url4676f93d-7ae3-400a-a808-d2ca4fa63e26"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "events",
+                            "rank_group": 21605,
+                            "rank_absolute": 20805,
+                            "position": "right",
+                            "xpath": "XPath63e4aa0e-d0ba-41bf-b418-99e53f5697b1",
+                            "title": "Title95eff288-f8fc-4aa0-af6d-62df67aba5c7",
+                            "url": "Urle5ce8f73-416b-4dec-96e2-a4ee9545d98d",
+                            "items": [
+                                {
+                                    "type": "events_element",
+                                    "title": "Title845cb78d-5ef6-456f-b6a8-9a899a37f2c6",
+                                    "snippet": "Snippet8b0498f4-02d3-4d55-99ea-b87c04ac1b07",
+                                    "url": "Urlfbfbd2a9-3200-42ea-b7af-b9b4e27731fa"
+                                },
+                                {
+                                    "type": "events_element",
+                                    "title": "Titlee49d554f-aafa-4fa3-bfd1-c05f6bb3b68b",
+                                    "snippet": "Snippet51a18f75-d1f3-4a98-85df-9405c8d5ec48",
+                                    "url": "Urlda1c19d4-935f-46bf-968d-074ffd0e6f2d"
+                                },
+                                {
+                                    "type": "events_element",
+                                    "title": "Titlebb314eff-ba4d-4aae-befe-70336e2af8d9",
+                                    "snippet": "Snippet3923c7d6-8038-4f06-98d6-7311d478565d",
+                                    "url": "Url3968fcf9-6a56-4ee8-87e3-6785ab982b77"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "related_searches",
+                            "rank_group": 4976,
+                            "rank_absolute": 18857,
+                            "position": "left",
+                            "xpath": "XPatha66b6109-81b9-40ff-b600-e167ed103512",
+                            "items": [
+                                "fdfb87f7-5119-4be7-a0a2-c2b2a8ca6c2b",
+                                "35da2b1f-1a7b-4d64-87f9-d0fe0344146a",
+                                "fd207658-3e63-4d8a-b2da-24bc6c75f7ff"
+                            ]
+                        },
+                        {
+                            "type": "multi_carousel",
+                            "rank_group": 27724,
+                            "rank_absolute": 7687,
+                            "position": "right",
+                            "xpath": "XPathd8eed241-8101-4beb-a22b-93fa229595a9",
+                            "items": [
+                                {
+                                    "type": "multi_carousel_element",
+                                    "title": "Title1abec6fc-b627-4daf-8761-050be279e665",
+                                    "multi_carousel_snippets": [
+                                        {
+                                            "type": "multi_carousel_snippet",
+                                            "title": "Title8b1a01bc-1460-495b-bec9-33ab96d7655e"
+                                        },
+                                        {
+                                            "type": "multi_carousel_snippet",
+                                            "title": "Title30979283-24c9-41b4-a533-174cb5719130"
+                                        },
+                                        {
+                                            "type": "multi_carousel_snippet",
+                                            "title": "Titleb8323786-f801-41d4-89f4-306f95465da3"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "multi_carousel_element",
+                                    "title": "Titlea3b5198e-b515-4db6-8ad2-04320f3a4a84",
+                                    "multi_carousel_snippets": [
+                                        {
+                                            "type": "multi_carousel_snippet",
+                                            "title": "Title74fdc125-22b7-4630-bca5-cb9a83822787"
+                                        },
+                                        {
+                                            "type": "multi_carousel_snippet",
+                                            "title": "Title6b6819da-d1c4-44d4-81f6-40f118db258a"
+                                        },
+                                        {
+                                            "type": "multi_carousel_snippet",
+                                            "title": "Title8eebeff0-b32a-47a5-8ea6-a7ebe5dfbc1a"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "multi_carousel_element",
+                                    "title": "Title564d134e-0d58-4dee-a8a2-b431fefcffb2",
+                                    "multi_carousel_snippets": [
+                                        {
+                                            "type": "multi_carousel_snippet",
+                                            "title": "Title47cb13d1-86bb-42aa-869b-cf4007a31f81"
+                                        },
+                                        {
+                                            "type": "multi_carousel_snippet",
+                                            "title": "Titleb41cfb71-63fd-4023-bf63-ba73b7a7f285"
+                                        },
+                                        {
+                                            "type": "multi_carousel_snippet",
+                                            "title": "Titleb59bc6ad-3417-4c02-ab6a-5868f7716d90"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

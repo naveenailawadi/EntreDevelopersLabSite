@@ -2,17 +2,19 @@ import json
 from client import RestClient
 from secrets import *
 
-CLIENT = RestClient(LOGIN, PASSWORD)
 
+class Mapper:
+    def __init__(self, login, password):
+        self.client = RestClient(login, password)
 
-def save_response(path):
-    directory = path.split('/')
-    filepath = ''
-    for name in directory[2:]:
-        filepath += f"{name}_"
-    filepath = filepath[:-1] + '.json'
+    def save_get_response(self, path):
+        directory = path.split('/')
+        filepath = ''
+        for name in directory:
+            filepath += f"{name}_"
+        filepath = filepath[:-1] + '.json'
 
-    # get the data
-    response = json.dumps(CLIENT.get(path), indent=4)
-    with open(filepath, 'w') as outfile:
-        outfile.write(response)
+        # get the data
+        response = json.dumps(self.client.get(path), indent=4)
+        with open(filepath, 'w') as outfile:
+            outfile.write(response)
