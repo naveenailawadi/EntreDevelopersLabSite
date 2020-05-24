@@ -1,0 +1,73 @@
+{
+    "version": "0.1.20200512",
+    "status_code": 20000,
+    "status_message": "Ok.",
+    "time": "0.0991 sec.",
+    "cost": 0,
+    "tasks_count": 1,
+    "tasks_error": 0,
+    "tasks": [
+        {
+            "id": "05242007-2161-0148-0000-f2f23e9071ca",
+            "status_code": 20000,
+            "status_message": "Ok.",
+            "time": "0.0003 sec.",
+            "cost": 0,
+            "result_count": 1,
+            "path": [
+                "v3",
+                "keywords_data",
+                "endpoints"
+            ],
+            "data": {
+                "api": "keywords_data",
+                "function": "endpoints"
+            },
+            "result": [
+                [
+                    "v3/keywords_data/endpoints",
+                    "v3/keywords_data/google/ad_traffic_by_keywords/live",
+                    "v3/keywords_data/google/ad_traffic_by_keywords/task_get/$id",
+                    "v3/keywords_data/google/ad_traffic_by_keywords/task_post",
+                    "v3/keywords_data/google/ad_traffic_by_keywords/tasks_ready",
+                    "v3/keywords_data/google/ad_traffic_by_platforms/live",
+                    "v3/keywords_data/google/ad_traffic_by_platforms/task_get/$id",
+                    "v3/keywords_data/google/ad_traffic_by_platforms/task_post",
+                    "v3/keywords_data/google/ad_traffic_by_platforms/tasks_ready",
+                    "v3/keywords_data/google/adwords_status",
+                    "v3/keywords_data/google/categories",
+                    "v3/keywords_data/google/keywords_for_category/live",
+                    "v3/keywords_data/google/keywords_for_category/task_get/$id",
+                    "v3/keywords_data/google/keywords_for_category/task_post",
+                    "v3/keywords_data/google/keywords_for_category/tasks_ready",
+                    "v3/keywords_data/google/keywords_for_keywords/live",
+                    "v3/keywords_data/google/keywords_for_keywords/task_get/$id",
+                    "v3/keywords_data/google/keywords_for_keywords/task_post",
+                    "v3/keywords_data/google/keywords_for_keywords/tasks_ready",
+                    "v3/keywords_data/google/keywords_for_site/live",
+                    "v3/keywords_data/google/keywords_for_site/task_get/$id",
+                    "v3/keywords_data/google/keywords_for_site/task_post",
+                    "v3/keywords_data/google/keywords_for_site/tasks_ready",
+                    "v3/keywords_data/google/languages",
+                    "v3/keywords_data/google/locations",
+                    "v3/keywords_data/google/locations/",
+                    "v3/keywords_data/google/search_volume/live",
+                    "v3/keywords_data/google/search_volume/task_get/$id",
+                    "v3/keywords_data/google/search_volume/task_post",
+                    "v3/keywords_data/google/search_volume/tasks_ready",
+                    "v3/keywords_data/google/tasks_ready",
+                    "v3/keywords_data/google_trends/categories",
+                    "v3/keywords_data/google_trends/explore/live",
+                    "v3/keywords_data/google_trends/explore/task_get/$id",
+                    "v3/keywords_data/google_trends/explore/task_post",
+                    "v3/keywords_data/google_trends/explore/tasks_ready",
+                    "v3/keywords_data/google_trends/languages",
+                    "v3/keywords_data/google_trends/locations",
+                    "v3/keywords_data/google_trends/locations/",
+                    "v3/keywords_data/google_trends/tasks_ready",
+                    "v3/keywords_data/tasks_ready"
+                ]
+            ]
+        }
+    ]
+}
