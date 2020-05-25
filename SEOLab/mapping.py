@@ -4,8 +4,8 @@ from secrets import *
 
 
 class Mapper:
-    def __init__(self, login, password):
-        self.client = RestClient(login, password, True)
+    def __init__(self):
+        self.client = RestClient(LOGIN, PASSWORD, True)
 
     def save_get_response(self, path):
         directory = path.split('/')

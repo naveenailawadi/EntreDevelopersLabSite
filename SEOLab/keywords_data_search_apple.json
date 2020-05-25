@@ -1,0 +1,35 @@
+{
+    "version": "0.1.20200512",
+    "status_code": 20000,
+    "status_message": "Ok.",
+    "time": "0.0697 sec.",
+    "cost": 0,
+    "tasks_count": 1,
+    "tasks_error": 1,
+    "tasks": [
+        {
+            "id": "05250637-2161-0108-0000-b9db8913e33c",
+            "status_code": 40004,
+            "status_message": "This id is used by another function, check the id.",
+            "time": "0.0014 sec.",
+            "cost": 0,
+            "result_count": 0,
+            "path": [
+                "v3",
+                "keywords_data",
+                "google",
+                "search_volume",
+                "task_get",
+                "05250637-2161-0108-0000-b9db8913e33c"
+            ],
+            "data": {
+                "api": "keywords_data",
+                "function": "search_volume",
+                "se": "google",
+                "location_name": "United States",
+                "target": "apple.com"
+            },
+            "result": null
+        }
+    ]
+}

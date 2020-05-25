@@ -6,14 +6,11 @@ from json import dumps
 
 class RestClient:
 
-    def __init__(self, username, password, sandbox=False):
+    def __init__(self, username, password):
         self.username = username
         self.password = password
 
-        if sandbox:
-            self.domain = "sandbox.dataforseo.com"
-        else:
-            self.domain = "api.dataforseo.com"
+        self.domain = "api.dataforseo.com"
 
     def request(self, path, method, data=None):
         connection = HTTPSConnection(self.domain)
@@ -37,6 +34,7 @@ class RestClient:
         else:
             data_str = dumps(data)
         return self.request(path, 'POST', data_str)
+
 
 '''
 NOTES

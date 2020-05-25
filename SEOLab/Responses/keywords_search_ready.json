@@ -1,0 +1,41 @@
+{
+    "version": "0.1.20200512",
+    "status_code": 20000,
+    "status_message": "Ok.",
+    "time": "0.5989 sec.",
+    "cost": 0,
+    "tasks_count": 1,
+    "tasks_error": 0,
+    "tasks": [
+        {
+            "id": "05250542-2161-0157-0000-37dd98411f05",
+            "status_code": 20000,
+            "status_message": "Ok.",
+            "time": "0.5168 sec.",
+            "cost": 0,
+            "result_count": 1,
+            "path": [
+                "v3",
+                "keywords_data",
+                "google",
+                "keywords_for_site",
+                "tasks_ready"
+            ],
+            "data": {
+                "api": "keywords_data",
+                "function": "keywords_for_site",
+                "se": "google"
+            },
+            "result": [
+                {
+                    "id": "05250422-2161-0108-0000-924cf3b05e12",
+                    "se": "google",
+                    "function": "keywords_for_site",
+                    "date_posted": "2020-05-25 01:22:00 +00:00",
+                    "tag": "",
+                    "endpoint": "/v3/keywords_data/google/keywords_for_site/task_get/05250422-2161-0108-0000-924cf3b05e12"
+                }
+            ]
+        }
+    ]
+}
