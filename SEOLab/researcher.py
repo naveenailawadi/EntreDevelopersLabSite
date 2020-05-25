@@ -67,4 +67,5 @@ NOTES
 - allow for custom keywords testing --> $1 per 10 keywords
 - running
     - log completions --> update every hour and send to client
+    - going to need a way to filter the most important keywords --> allow user to filter data
 '''
