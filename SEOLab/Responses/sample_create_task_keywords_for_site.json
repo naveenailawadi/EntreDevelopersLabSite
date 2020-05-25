@@ -1,0 +1,34 @@
+{
+    "version": "0.1.20200512",
+    "status_code": 20000,
+    "status_message": "Ok.",
+    "time": "0.0636 sec.",
+    "cost": 0.05,
+    "tasks_count": 1,
+    "tasks_error": 0,
+    "tasks": [
+        {
+            "id": "05250422-2161-0108-0000-924cf3b05e12",
+            "status_code": 20100,
+            "status_message": "Task Created.",
+            "time": "0.0017 sec.",
+            "cost": 0.05,
+            "result_count": 0,
+            "path": [
+                "v3",
+                "keywords_data",
+                "google",
+                "keywords_for_site",
+                "task_post"
+            ],
+            "data": {
+                "api": "keywords_data",
+                "function": "keywords_for_site",
+                "se": "google",
+                "location_name": "United States",
+                "target": "entredeveloperslab.com"
+            },
+            "result": null
+        }
+    ]
+}
