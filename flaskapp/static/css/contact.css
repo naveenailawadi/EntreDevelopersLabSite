@@ -65,3 +65,10 @@ color: #fff;
 ul#Menu ul li a:hover{
 background: #4b545f;
 }
+
+ul li:hover > ul,
+ul li ul:hover {
+  visibility: visible;
+  opacity: 1;
+  display: block;
+}
