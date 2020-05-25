@@ -58,19 +58,21 @@ class KeywordsAnalyzer:
 
 '''
 NOTES
-- create a current SEO report based on current tags and tokenization (remove useless words)
-    - start with the simple organic stuff (google and bing)
-        - see: people also search, related searches
-    - keywords (GOLDMINE)
-        - see: competition (rating 0-1), graph monthly searches over past year
-        - required fields: domain, location, language (for optimal accuracy)
 - allow for custom keywords testing --> $1 per 10 keywords
 - running
     - log completions --> update every hour and send to client
     - going to need a way to filter the most important keywords --> allow user to filter data
-- keywords configuration (get custom domain recommendations
+- keywords configuration (get custom domain recommendations)
     - store ids in a database --> can be used later to recreate SEO pulls (email this ID as confirmation)
         - can add this to a user account if necessary (but probably overkill)
         - will need date and time that the report was created
         - will need to record sales for this in this database --> can track revenue over time
+    - can add some metrics about other ads and expected costs with the /v3/keywords_data/google/ad_traffic_by_keywords endpoint
+- get category domain recommendations
+    - will give out competitors and advise future positioning based on any particular catgory
+- current analysis (gives competitors, keywords, categories, referring to-from)
+    - https://docs.dataforseo.com/v3/traffic_analytics/similarweb/task_get/?python
+    - have custom competitor sorting (make it look pretty)
+- current category research reports
+    = allow input for category and location --> compile data for competitors
 '''
