@@ -68,4 +68,9 @@ NOTES
 - running
     - log completions --> update every hour and send to client
     - going to need a way to filter the most important keywords --> allow user to filter data
+- keywords configuration (get custom domain recommendations
+    - store ids in a database --> can be used later to recreate SEO pulls (email this ID as confirmation)
+        - can add this to a user account if necessary (but probably overkill)
+        - will need date and time that the report was created
+        - will need to record sales for this in this database --> can track revenue over time
 '''
