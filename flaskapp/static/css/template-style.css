@@ -2098,6 +2098,11 @@ video {
   }
 }
 
+a.original-hyperlink
+{
+  color: #3498DB !important;
+}
+
 p.submission-error
 {
   color: #C81010;

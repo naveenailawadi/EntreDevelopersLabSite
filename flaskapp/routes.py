@@ -23,6 +23,11 @@ def contact():
     return render_template('contact.html', title='Contact')
 
 
+@app.route("/my_home", methods=['GET', 'POST'])
+def my_home():
+    return render_template('my_home.html', title='My Home')
+
+
 # make a backend route to send the data somewhere (a database, telegram message, etc)
 @app.route("/add_lead", methods=['GET', 'POST'])
 def add_lead():
