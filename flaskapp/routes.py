@@ -22,9 +22,8 @@ def tune_in():
 def contact():
     return render_template('contact.html', title='Contact')
 
+
 # make a backend route to send the data somewhere (a database, telegram message, etc)
-
-
 @app.route("/add_lead", methods=['GET', 'POST'])
 def add_lead():
     messenger = Messenger(TELEGRAM_TOKEN, TELEGRAM_CHAT_ID)
@@ -62,3 +61,10 @@ def add_lead():
     db.session.commit()
 
     return json.dumps({'message': f"added {new_lead} to the database"}), 201
+
+
+# make a backend route to get keywords data for SEO
+@app.route("/SEOLab/get_keywords_recommendations")
+def get_keywords_recommendations():
+    # make sure that it is a valid request --> require last 4 digits of credit card purchase to authenticate
+    stuff = ''

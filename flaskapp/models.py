@@ -22,3 +22,25 @@ class LeadModel(db.Model):
 
     def __repr__(self):
         return f"Lead('{self.name}', '{self.date_posted}')"
+
+
+# create a model for storing SEOLab information
+class SEOLabPurchaseModel(db.Model):
+    __tablename__ = 'seo_lab_data'
+    id = db.Column(db.Integer, primary_key=True)
+
+    # contact information
+    name = db.Column(db.String(50), nullable=False)
+    email = db.Column(db.String(50), nullable=False)
+    phone_number = db.Column(db.String(50), nullable=True)
+
+    # SEO request stuff
+    domain = db.Column(db.String(140), nullable=False)
+    search_id = db.Column(db.String(72), nullable=True)  # keep this nullable to verify purchase first then send the request
+    sale_price = db.Column(db.Float, nullable=False)
+    sale_type = db.Column(db.String(50), nullable=False)
+
+    purchase_date = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
+
+    def __repr__(self):
+        return f"SEOLabPurchaseModel('{self.name}', '{self.date_posted}')"
