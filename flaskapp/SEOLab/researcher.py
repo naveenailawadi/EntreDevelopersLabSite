@@ -2,7 +2,7 @@ from flakapp.SEOLab.client import RestClient
 from flakapp.SEOLab.secrets import *
 
 
-class KeywordsAnalyzer:
+class KeywordsRecommender:
     def __init__(self):
         self.client = RestClient(LOGIN, PASSWORD)
 
