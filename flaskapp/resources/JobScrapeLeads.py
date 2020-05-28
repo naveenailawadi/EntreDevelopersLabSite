@@ -55,6 +55,24 @@ class JobScrapeLeadResource(Resource):
 
         return {'message': f"Added {company} as a new job scrape lead."}, 201
 
+    def delete(self):
+        # this doesn't acually delete the entry. instead, it marks the entry as contacted
+        try:
+            request_json = json.loads(request.get_json(force=True))
+        except TypeError:
+            request_json = request.get_json(force=True)
+
+        # get the information
+        lead_id = request_json['leadId']
+
+        # get the item from the database and update it
+        old_lead = JobScrapeLeadsModel.query.filter_by(id=lead_id).first()
+        old_lead.contacted = True
+
+        db.session.commit()
+
+        return {'message': f"Marked {old_lead.company} as contacted"}, 201
+
 
 class FoundCompaniesResource(Resource):
     # this endpoint will get all the found companies (in history)
@@ -62,3 +80,25 @@ class FoundCompaniesResource(Resource):
         companies = [lead.company for lead in JobScrapeLeadsModel.query.all()]
 
         return {'leads': companies}, 201
+
+
+class VerifyPasswordResource(Resource):
+    def post(self):
+        try:
+            request_json = json.loads(request.get_json(force=True))
+        except TypeError:
+            request_json = request.get_json(force=True)
+
+        # get the entered password
+        use_case = request_json['use_case']
+        entered_password = request_json['password']
+
+        if len(use_case) == 0:
+            return {'message': 'no use case provided'}, 400
+
+        password_query = InternalPasswordModel.query.filter_by(use=use_case).filter_by(password=entered_password).first()
+
+        if password_query:
+            return {'message': 'correct password'}, 201
+        else:
+            return {'message': 'Incorrect password.'}, 403

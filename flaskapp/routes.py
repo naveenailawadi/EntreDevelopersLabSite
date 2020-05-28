@@ -24,8 +24,6 @@ def my_home():
     return render_template('my_home.html', title='My Home')
 
 
-# make a backend route to get keywords data for SEO
-@app.route("/SEOLab/get_keywords_recommendations")
-def get_keywords_recommendations():
-    # make sure that it is a valid request --> require last 4 digits of credit card purchase to authenticate
-    stuff = ''
+@app.route("/leads", methods=['GET', 'POST'])
+def leads():
+    return render_template('leads.html', title='Leads')

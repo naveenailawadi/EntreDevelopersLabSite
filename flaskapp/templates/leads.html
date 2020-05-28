@@ -1,0 +1,54 @@
+{% extends "layout.html" %}
+
+{% block content %}
+      <!-- Content -->
+      <article>
+        <header class="section background-dark">
+          <div class="line">
+            <h1 class="text-white margin-top-bottom-40 text-size-60 text-line-height-1">Leads</h1>
+            <p class="margin-bottom-0 text-size-16">See a table of leads automatically populated every day below. Click the
+            "Remove" button to indicate that you have reached out to the corresponding company. This will remove them from
+            the list and move it into a completed contacts database. Also, if you believe that the lead is useless, feel
+            free to remove them from the database. Plenty more will be on the way soon.</p>
+          </div>
+        </header>
+        <div class="section background-dark">
+          <div class="line">
+            <!--A Template for table rows-->
+            {% raw %}
+            <template id="company-contact-template">
+              <tr id="{{id}}">
+                <td>{{{company}}}</td>
+                <td>{{{location}}}</td>
+                <td><a href="http://{{url}}" target="_blank">{{{url}}}</a></td>
+                <td><button class="submit-form button background-primary text-white" id="{{id}}" onclick="removeLead(this.id)">Remove</button></td>
+              </tr>
+            </template>
+            {% endraw %}
+
+            <table>
+              <tbody id="lead-table">
+                <tr>
+                  <td><strong>Company</strong></td>
+                  <td><strong>Location</strong></td>
+                  <td><strong>URL</strong></td>
+                </tr>
+              </tbody>
+            </table>
+            <form class="customform" id="passwordForm">
+                <div class="l-6">
+                  <input name="lead-password" id="passwordField" class="text-white" placeholder="Password" type="password">
+                  <input type="checkbox" onclick="showPassword()">Show Password
+                </div>
+                <div class="l-6">
+                  <button class="s-12 submit-form button background-primary text-white" type="submit">View Leads</button>
+                </div>
+            </form>
+          </div>
+
+        </div>
+      </article>
+      <!--Script-->
+      <script type="text/javascript" src="{{url_for('static', filename='js/leads.js')}}"></script>
+      <script language="JavaScript" type="text/javascript" src="{{ url_for('static', filename='js/mustache/mustache.js') }}"></script>
+{% endblock content %}
