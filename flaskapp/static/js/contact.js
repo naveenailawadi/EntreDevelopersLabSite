@@ -72,7 +72,7 @@ $('#contactForm').submit(function(e) {
     $.ajax({
               type: 'POST',
               // THIS WILL NEED TO BE CHANGED!!!
-              url: "https://entredeveloperslab.com/add_lead",
+              url: "http://127.0.0.1:5000/api/send_telegram",
               data: JSON.stringify(
                 {
                     name: name,

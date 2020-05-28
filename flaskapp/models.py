@@ -26,7 +26,7 @@ class LeadModel(db.Model):
 
 # create a model for storing SEOLab information
 class SEOLabPurchaseModel(db.Model):
-    __tablename__ = 'seo_lab_data'
+    __tablename__ = 'seo_lab_purchases'
     id = db.Column(db.Integer, primary_key=True)
 
     # contact information
@@ -44,3 +44,15 @@ class SEOLabPurchaseModel(db.Model):
 
     def __repr__(self):
         return f"SEOLabPurchaseModel('{self.name}', '{self.date_posted}')"
+
+
+# create a model for leads from jobs scraping
+class JobScrapeLeadsModel(db.Model):
+    __tablename__ = 'job_scrape_leads'
+    id = db.Column(db.Integer, primary_key=True)
+    company = db.Column(db.String(100), nullable=False)
+    url = db.Column(db.String(150), nullable=True)
+    location = db.Column(db.String(75), nullable=True)
+
+    date_posted = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
+    contacted = db.Column(db.Boolean, nullable=False, default=False)

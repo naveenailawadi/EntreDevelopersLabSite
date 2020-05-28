@@ -10,9 +10,11 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///edl.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 bcrypt = Bcrypt(app)
-CORS(app, supports_credentials=True)
 
-from flaskapp import routes
+
+# run it!
+CORS(app, supports_credentials=True)
+from flaskapp import routes, api
 
 if __name__ == '__main__':
     app.run()
