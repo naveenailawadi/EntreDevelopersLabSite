@@ -1,7 +1,7 @@
 // get important attributes of the html
 var passwordForm = $('#passwordForm');
 var passwordField = $('#passwordField');
-var apiRoot = 'http://127.0.0.1:5000/api';
+var apiRoot = 'https://entredeveloperslab.com/api';
 
 // hide the table at first, display a password text box
 var leadTable = $('#lead-table');
