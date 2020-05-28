@@ -10,7 +10,10 @@ import json
 class TelegramResource(Resource):
     def post(self):
         messenger = Messenger(TELEGRAM_TOKEN, TELEGRAM_CHAT_ID)
-        request_json = request.get_json(force=True)
+        try:
+            request_json = json.loads(request.get_json(force=True))
+        except TypeError:
+            request_json = request.get_json(force=True)
 
         # do something (send via telegram eventually)
         try:

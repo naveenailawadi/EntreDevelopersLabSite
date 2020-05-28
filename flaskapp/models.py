@@ -56,3 +56,10 @@ class JobScrapeLeadsModel(db.Model):
 
     date_posted = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
     contacted = db.Column(db.Boolean, nullable=False, default=False)
+
+
+class InternalPasswordModel(db.Model):
+    __tablename__ = 'internal_passwords'
+    id = db.Column(db.Integer, primary_key=True)
+    use = db.Column(db.String(50), nullable=False, unique=True)
+    password = db.Column(db.String(50), nullable=False)
