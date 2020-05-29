@@ -1,6 +1,7 @@
 from http.client import HTTPSConnection
 from base64 import b64encode
 from json import loads, dumps
+from datetime import datetime as dt
 
 
 class RestClient:
@@ -33,6 +34,20 @@ class RestClient:
         else:
             data_str = dumps(data)
         return self.request(path, 'POST', data_str)
+
+
+# create a class that hosts the necessary data
+class Report:
+    def __init__(self, url, location, report_id):
+        # create a
+        today = dt.now()
+        self.date = f"{today.month}/{today.day}/{today.year} ({today.hour}:{today.minute})"
+
+        self.url = url
+        self.location = location
+        self.id = report_id
+
+    # make functions to add particular data depending on the report requested
 
 
 '''

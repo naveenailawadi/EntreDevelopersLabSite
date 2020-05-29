@@ -1,0 +1,64 @@
+<!--Make a report data type and render everything with that-->
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{{flask.url_for('static', filename='css/components.css')}}">
+    <link rel="stylesheet" href="{{flask.url_for('static', filename='css/icons.css')}}">
+    <link rel="stylesheet" href="{{flask.url_for('static', filename='css/responsee.css')}}">
+    <link rel="stylesheet" href="{{flask.url_for('static', filename='owl-carousel/owl.carousel.css')}}">
+    <link rel="stylesheet" href="{{flask.url_for('static', filename='owl-carousel/owl.theme.css')}}">
+    <link rel="stylesheet" href="{{flask.url_for('static', filename='css/template-style.css')}}">
+    <link href='https://fonts.googleapis.com/css?family=Playfair+Display&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link rel="icon" type="image/png" href="{{flask.url_for('static', filename='img/basic_block_logo.png')}}">
+</head>
+<body class="size-1140">
+    <!-- HEADER -->
+    <header role="banner" class="position-absolute">
+      <!-- Top Navigation -->
+      <nav class="background-transparent background-transparent-hightlight full-width sticky">
+        <div class="s-12 l-2">
+            <img class="logo-dark" src="{{flask.url_for('static', filename='img/logo-dark.png')}}" alt="">
+        </div>
+      </nav>
+    </header>
+
+    <!-- MAIN -->
+    <main role="main">
+        <header class="section background-dark">
+          <div class="line">
+            <h1 class="text-white margin-top-bottom-40 text-size-60 text-line-height-1">SEO Lab Report</h1>
+            <p class="margin-bottom-0 text-size-16">{{report.location}}</p>
+            <p class="margin-bottom-0 text-size-16">{{report.date}}</p>
+            <p class="margin-bottom-0 text-size-16">Report id: {{report.id}}</p>
+          </div>
+        </header>
+
+        <div class="section background-white">
+            <div class="line">
+                <h2 class="text-size-40 margin-bottom-30">Recommended Keywords Report</h2>
+                <hr class="break-small background-primary margin-bottom-30">
+                <ul>
+                    <li>
+                        <a class="original-hyperlink" href="#comparative-research">Comparative Research</a>
+                        <ul>
+                            <li>
+                                <a class="original-hyperlink" href="#comparative-research-search-volume">Search Volume</a>
+                            </li>
+                            <li>
+                                <a class="original-hyperlink" href="#comparative-research-cpc">Cost per Click (CPC)</a>
+                            </li>
+                            <li>
+                                <a class="original-hyperlink" href="#comparative-research-firepower">Firepower</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
