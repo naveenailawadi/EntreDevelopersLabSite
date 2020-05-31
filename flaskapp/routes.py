@@ -1,7 +1,7 @@
 from flask import render_template, flash, redirect, url_for, send_file, make_response
 from flaskapp import app
 from flaskapp.SEOLab.exporter import Exporter
-from flaskapp.SEOLab.client import Report
+from flaskapp.SEOLab.researcher import Report
 import os
 import pdfkit
 
@@ -39,12 +39,12 @@ def leads():
 # can just download this report --> open a new tab for each of the reports (but don't switch to them automatically)
 # ^ do as much as possible in js
 # make the report ID a keyword argument --> the report object will be able to generate information on it
-@app.route("/download_seo_report/<report_type>/<report_site>/<report_location>/<report_id>", methods=['GET', 'POST'])
-def download_seo_report(report_type, report_site, report_location, report_id):
+@app.route("/download_seo_report/<endpoint>/<report_id>", methods=['GET', 'POST'])
+def download_seo_report(report_id, endpoint):
     # eventually this will have less arguments as the API will pull them from the json
-    report = Report(report_site, report_location, report_id)
+    report = Report(report_id, endpoint)
 
-    report_html = render_template(f"SEOLabTemplates/{report_type}.html", report=report, main_site=MAIN_SITE, for_download=True)
+    report_html = render_template(f"SEOLabTemplates/{endpoint}.html", report=report, main_site=MAIN_SITE, for_download=True)
 
     # create the pdf and download it
     options = {
@@ -65,10 +65,10 @@ def download_seo_report(report_type, report_site, report_location, report_id):
     # return report_html
 
 
-@app.route("/render_seo_report/<report_type>/<report_site>/<report_location>/<report_id>", methods=['GET', 'POST'])
-def render_seo_report(report_type, report_site, report_location, report_id):
+@app.route("/render_seo_report/<endpoint>/<report_id>", methods=['GET', 'POST'])
+def render_seo_report(report_id, endpoint):
     # eventually this will have less arguments as the API will pull them from the json
-    report = Report(report_site, report_location, report_id)
+    report = Report(report_id, endpoint)
 
-    return render_template(f"SEOLabTemplates/{report_type}.html", report=report, main_site=MAIN_SITE, for_download=False)
+    return render_template(f"SEOLabTemplates/{endpoint}.html", report=report, main_site=MAIN_SITE, for_download=False)
     # return report_html

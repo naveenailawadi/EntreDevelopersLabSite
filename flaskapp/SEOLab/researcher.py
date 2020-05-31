@@ -1,10 +1,21 @@
-from flakapp.SEOLab.client import RestClient
-from flakapp.SEOLab.secrets import *
+from flaskapp.SEOLab.client import RestClient
+from flaskapp.SEOLab.secrets import *
+from datetime import datetime as dt
 
 
-class KeywordsRecommender:
-    def __init__(self):
+# create a class that hosts the necessary data
+class Report:
+    def __init__(self, report_id, endpoint):
+        # create a
+        today = dt.now()
         self.client = RestClient(LOGIN, PASSWORD)
+
+        # eventually get this from a database
+        self.date = f"{today.month}/{today.day}/{today.year} ({today.hour}:{today.minute})"
+        self.id = report_id
+
+        # set the variables in the response
+        exec(f"self.{endpoint}()")
 
     def create_task(self, location, website):
         post_data = dict()
@@ -19,16 +30,12 @@ class KeywordsRecommender:
         return response
 
     # create a class that creates reports for all the keywords upon a search
-    def get_task_keywords_data(self, task_id):
-        response = self.client.get(f"/v3/keywords_data/google/keywords_for_site/task_get/{task_id}")
+    def get_task_keywords_data(self):
+        response = self.client.get(f"/v3/keywords_data/google/keywords_for_site/task_get/{self.id}")
+        self.location = response['tasks'][0]['data']['location_name']
+        self.url = response['tasks'][0]['data']['target']
 
-        # add the header data to a dictionary
-        header_data = {
-            # get the date from the database
-            date: ''
-        }
-
-        return header_data, keywords
+        return response
 
     def get_tasks_data(self):
         response = self.client.get("/v3/keywords_data/google/keywords_for_site/tasks_ready")
@@ -43,6 +50,8 @@ class KeywordsRecommender:
                         # GET /v3/keywords_data/google/search_volume/task_get/$id
                         if(resultTaskInfo['endpoint']):
                             results.append(client.get(resultTaskInfo['endpoint']))
+
+    # make functions to add particular data depending on the report requested
 
 
 '''

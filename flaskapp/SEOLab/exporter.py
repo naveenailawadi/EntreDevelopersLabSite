@@ -1,5 +1,5 @@
 import flask
-from flaskapp.SEOLab.client import Report
+from flaskapp.SEOLab.researcher import Report
 import jinja2
 
 

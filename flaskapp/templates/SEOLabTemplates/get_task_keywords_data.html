@@ -37,7 +37,7 @@
 
             <div class="line">
                 <h1 class="text-white margin-top-bottom-40 text-size-60 text-line-height-1">SEO Lab Report</h1>
-                <p class="margin-bottom-0 text-size-16">{{report.url}}</p>
+                <a class="margin-bottom-0 text-size-16" target="_blank" href="http://{{report.url}}">{{report.url}}</a>
                 <p class="margin-bottom-0 text-size-16">{{report.location}}</p>
                 <p class="margin-bottom-0 text-size-16">{{report.date}}</p>
                 <p class="margin-bottom-80 text-size-16">Report id: {{report.id}}</p>
@@ -68,6 +68,16 @@
                             <li>
                                 <a class="original-hyperlink" href="#comparative-research-firepower">Firepower</a>
                             </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="original-hyperlink" href="#individual-reports">Individual Reports</a>
+                        <ul>
+                            {% for keyword in report.keywords %}
+                            <li>
+                                <a class="original-hyperlink" href="#individual-reports-{{keyword.replace(' ', '-')}}">{{keyword}}</a>
+                            </li>
+                            {% endfor %}
                         </ul>
                     </li>
                 </ul>
