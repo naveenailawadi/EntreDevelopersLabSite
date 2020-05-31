@@ -1,8 +1,11 @@
-from flask import render_template, flash, redirect, url_for, send_file
+from flask import render_template, flash, redirect, url_for, send_file, make_response
 from flaskapp import app
 from flaskapp.SEOLab.exporter import Exporter
+from flaskapp.SEOLab.client import Report
 import os
 import pdfkit
+
+MAIN_SITE = 'https://entredeveloperslab.com'
 
 
 @app.route("/")
@@ -33,18 +36,39 @@ def leads():
 
 
 # this just hosts the report for viewing purposes (it will be automatically downloaded as well)
-# can just download this report
-@app.route("/download_seo_report", methods=['GET', 'POST'])
-def download_seo_report():
-    exporter = Exporter('SEOLabTemplates/keyword_recommendation.html')
+# can just download this report --> open a new tab for each of the reports (but don't switch to them automatically)
+# ^ do as much as possible in js
+# make the report ID a keyword argument --> the report object will be able to generate information on it
+@app.route("/download_seo_report/<report_type>/<report_site>/<report_location>/<report_id>", methods=['GET', 'POST'])
+def download_seo_report(report_type, report_site, report_location, report_id):
+    # eventually this will have less arguments as the API will pull them from the json
+    report = Report(report_site, report_location, report_id)
 
-    report = exporter.create_report()
-
-    report_path = url_for('static', filename='SEOLabReports') + os.getcwd()
+    report_html = render_template(f"SEOLabTemplates/{report_type}.html", report=report, main_site=MAIN_SITE, for_download=True)
 
     # create the pdf and download it
-    pdf = pdfkit.from_string(str(report), report_path)
+    options = {
+        'page-size': 'A6',
+        'margin-top': '0.1in',
+        'margin-right': '0.1in',
+        'margin-bottom': '0.1in',
+        'margin-left': '0.1in',
+    }
+    pdf = pdfkit.from_string(report_html, False, options=options)
 
-    send_file(pdf)
+    # this renders the pdf in the browser
+    response = make_response(pdf)
+    response.headers['Content-Type'] = 'application/pdf'
+    response.headers['Content-Disposition'] = f"inline; filename={report.id}.pdf"
 
-    return report
+    return response
+    # return report_html
+
+
+@app.route("/render_seo_report/<report_type>/<report_site>/<report_location>/<report_id>", methods=['GET', 'POST'])
+def render_seo_report(report_type, report_site, report_location, report_id):
+    # eventually this will have less arguments as the API will pull them from the json
+    report = Report(report_site, report_location, report_id)
+
+    return render_template(f"SEOLabTemplates/{report_type}.html", report=report, main_site=MAIN_SITE, for_download=False)
+    # return report_html
