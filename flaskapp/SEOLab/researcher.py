@@ -1,6 +1,11 @@
 from flaskapp.SEOLab.client import RestClient
 from flaskapp.SEOLab.secrets import *
 from datetime import datetime as dt
+import json
+import seaborn as sns
+import matplotlib.pyplot as plt
+import pandas as pd
+import os
 
 
 # create a class that hosts the necessary data
@@ -14,8 +19,32 @@ class Report:
         self.date = f"{today.month}/{today.day}/{today.year} ({today.hour}:{today.minute})"
         self.id = report_id
 
+        # create a folder for the report
+        self.directory = f"flaskapp/static/SEOLabReports/{self.id}"
+
+        try:
+            os.mkdir(self.directory)
+        except FileExistsError:
+            pass
+
         # set the variables in the response
         exec(f"self.{endpoint}()")
+
+    # create a method just for testing
+
+    def test(self):
+        # make the response an object to call it later (when creating data forms)
+        self.response = json.loads(open('flaskapp/SEOLab/Responses/_v3_keywords_data_google_keywords_for_site_task_get_apple.json').read())
+
+        # make useful variables for making graphs
+
+        # allow the user to set the number of keywords
+        results = self.response['tasks'][0]['result'][:20]
+        self.keywords = [entry['keyword'] for entry in results]
+        self.search_volumes = [entry['search_volume'] for entry in results]
+
+        self.location = self.response['tasks'][0]['data']['location_name']
+        self.url = self.response['tasks'][0]['data']['target']
 
     def create_task(self, location, website):
         post_data = dict()
@@ -31,11 +60,10 @@ class Report:
 
     # create a class that creates reports for all the keywords upon a search
     def get_task_keywords_data(self):
-        response = self.client.get(f"/v3/keywords_data/google/keywords_for_site/task_get/{self.id}")
-        self.location = response['tasks'][0]['data']['location_name']
-        self.url = response['tasks'][0]['data']['target']
-
-        return response
+        # make the response an object to call it later (when creating data forms)
+        self.response = self.client.get(f"/v3/keywords_data/google/keywords_for_site/task_get/{self.id}")
+        self.location = self.response['tasks'][0]['data']['location_name']
+        self.url = self.response['tasks'][0]['data']['target']
 
     def get_tasks_data(self):
         response = self.client.get("/v3/keywords_data/google/keywords_for_site/tasks_ready")
@@ -51,7 +79,25 @@ class Report:
                         if(resultTaskInfo['endpoint']):
                             results.append(client.get(resultTaskInfo['endpoint']))
 
-    # make functions to add particular data depending on the report requested
+    # make functions to add particular charts depending on the report requested
+    def create_horizontal_bar_chart(self, values, labels, title, ylabel, xlabel):
+        sns.set(style="whitegrid")
+        sns.set_color_codes("pastel")
+
+        # Initialize the matplotlib figure
+        plt.figure(figsize=(10, 6))
+        plt.title("title")
+
+        plt.ylabel(ylabel)
+        plt.xlabel(xlabel)
+
+        # save the file to the folder created for the report
+        plot_url = f"{self.directory}/{title}.png"
+
+        plt.savefig(plot_url)
+        plt.close()
+
+        return plot_url.replace("flaskapp", "")
 
 
 '''
