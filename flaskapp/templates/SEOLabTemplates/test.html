@@ -44,7 +44,7 @@
                 {% if not for_download %}
 
                         <button class="button background-primary text-white">
-                            <a href="http://127.0.0.1:5000/download_seo_report/keyword_recommendation/{{report.url}}/{{report.location}}/{{report.id}}" target="_blank">Download</a>
+                            <a href="http://127.0.0.1:5000/download_seo_report/test/{{report.id}}" target="_blank">Download</a>
                         </button>
                 {% endif %}
 
@@ -60,10 +60,13 @@
                         <a class="original-hyperlink" href="#comparative-research">Comparative Research</a>
                         <ul>
                             <li>
-                                <a class="original-hyperlink" href="#comparative-research-search-volume">Search Volume</a>
+                                <a class="original-hyperlink" href="#comparative-research-search-volume">Monthly Search Volume</a>
                             </li>
                             <li>
                                 <a class="original-hyperlink" href="#comparative-research-cpc">Cost per Click (CPC)</a>
+                            </li>
+                            <li>
+                                <a class="original-hyperlink" href="#comparative-research-competition">Competition</a>
                             </li>
                             <li>
                                 <a class="original-hyperlink" href="#comparative-research-firepower">Firepower</a>
@@ -82,8 +85,11 @@
                     </li>
                 </ul>
             </div>
-            <div class="line">
-                <img src="{{report.create_horizontal_bar_chart(report.keywords, report.search_volumes, 'Search Volume by Keyword', 'Keywords', 'Volume')}}">
+            <div class="margin" id="comparative-research">
+                <img id="comparative-research-search-volume" src="{{report.create_horizontal_bar_chart(report.keywords, report.search_volumes, 'Monthly Search Volume by Keyword', 'Keywords', 'Volume')}}">
+                <img id="comparative-research-cpc" src="{{report.create_horizontal_bar_chart(report.keywords, report.cpcs, 'Cost per Click by Keyword', 'Keywords', 'CPC ($)')}}">
+                <img id="comparative-research-competition" src="{{report.create_horizontal_bar_chart(report.keywords, report.competition_ratings, 'Competition by Keyword', 'Keywords', 'Competition Rating')}}">
+                <img id="comparative-research-firepower" src="{{report.create_horizontal_bar_chart(report.keywords, report.firepower_ratings, 'Firepower by Keyword', 'Keywords', 'Firepower')}}">
             </div>
         </div>
     </main>

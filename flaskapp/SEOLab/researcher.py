@@ -39,9 +39,12 @@ class Report:
         # make useful variables for making graphs
 
         # allow the user to set the number of keywords
-        results = self.response['tasks'][0]['result'][:20]
+        results = self.response['tasks'][0]['result'][:25]
         self.keywords = [entry['keyword'] for entry in results]
         self.search_volumes = [entry['search_volume'] for entry in results]
+        self.cpcs = [entry['cpc'] for entry in results]
+        self.competition_ratings = [entry['competition'] * 100 for entry in results]
+        self.firepower_ratings = [entry['search_volume'] / entry['competition'] for entry in results]
 
         self.location = self.response['tasks'][0]['data']['location_name']
         self.url = self.response['tasks'][0]['data']['target']
@@ -81,15 +84,17 @@ class Report:
 
     # make functions to add particular charts depending on the report requested
     def create_horizontal_bar_chart(self, values, labels, title, ylabel, xlabel):
-        sns.set(style="whitegrid")
+        sns.set(style="whitegrid", font_scale=1.5)
         sns.set_color_codes("pastel")
 
         # Initialize the matplotlib figure
-        plt.figure(figsize=(10, 6))
-        plt.title("title")
+        plt.rcParams['figure.figsize'] = (len(labels), 10)
+        plt.ylim(100)
 
+        plt.title(title)
         plt.ylabel(ylabel)
         plt.xlabel(xlabel)
+        sns.barplot(x=labels, y=values)
 
         # save the file to the folder created for the report
         plot_url = f"{self.directory}/{title}.png"
