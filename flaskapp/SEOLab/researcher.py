@@ -1,3 +1,4 @@
+from flask import url_for
 from flaskapp.SEOLab.client import RestClient
 from flaskapp.SEOLab.secrets import *
 from datetime import datetime as dt
@@ -19,7 +20,7 @@ class Report:
         self.id = report_id
 
         # create a folder for the report
-        self.directory = f"flaskapp/static/SEOLabReports/{self.id}"
+        self.directory = f"{os.getcwd()}/flaskapp/{url_for('static', filename='SEOLabReports')}/{self.id}"
 
         try:
             os.mkdir(self.directory)
