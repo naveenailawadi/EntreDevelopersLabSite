@@ -23,7 +23,9 @@
           <!-- Top Navigation -->
             <div style="width: 200px; padding-top: 20px; padding-left: 20px;">
                 {% if not for_download %}
-                    <img src="{{main_site}}{{url_for('static', filename='img/logo.png')}}" alt="">
+                    <a href="{{url_for('home')}}">
+                        <img src="{{main_site}}{{url_for('static', filename='img/logo.png')}}" alt="">
+                    </a>
                 {% else %}
                     <img src="{{main_site}}{{url_for('static', filename='img/logo-dark.png')}}" alt="">
                 {% endif %}
@@ -91,6 +93,13 @@
                 <img id="comparative-research-competition" src="{{report.create_horizontal_bar_chart(report.keywords, report.competition_ratings, 'Competition by Keyword', 'Keywords', 'Competition Rating')}}">
                 <img id="comparative-research-firepower" src="{{report.create_horizontal_bar_chart(report.keywords, report.firepower_ratings, 'Firepower by Keyword', 'Keywords', 'Firepower')}}">
             </div>
+            <!--Output Graphs for each keyword-->
+            {% for keyword in keywords %}
+                <div class="margin" id="individual-reports-{{keyword.replace(' ', '-')}}">
+
+                </div>
+            {% endfor %}
+
         </div>
     </main>
 </body>

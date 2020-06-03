@@ -102,7 +102,7 @@ class Report:
 
             # Initialize the matplotlib figure
             plt.rcParams['figure.figsize'] = (len(labels), 10)
-            plt.ylim(100)
+            plt.ylim(200)
 
             plt.title(title)
             plt.ylabel(ylabel)
@@ -116,6 +116,9 @@ class Report:
             plt.close()
 
         return url_for('static', filename=f"SEOLabReports/{self.id}/{file}")
+
+    def create_line_graph(self, keyword, title, ylabel, xlabel):
+        stuff = ''
 
 
 '''

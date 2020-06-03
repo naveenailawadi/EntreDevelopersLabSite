@@ -38,6 +38,7 @@ def leads():
 @app.route("/download_seo_report/<endpoint>/<report_id>", methods=['GET', 'POST'])
 def download_seo_report(report_id, endpoint):
     import pdfkit
+    from flaskapp.SEOLab.researcher import Report
     # eventually this will have less arguments as the API will pull them from the json
     report = Report(report_id, endpoint)
 
