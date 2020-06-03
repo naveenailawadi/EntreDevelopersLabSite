@@ -20,12 +20,21 @@ class Report:
         self.id = report_id
 
         # create a folder for the report
-        self.directory = f"{os.getcwd()}/flaskapp/{url_for('static', filename='SEOLabReports')}/{self.id}"
+
+        # handle for a blank current directory
+        self.current_directory = os.getcwd()
+        self.in_wsgi = False
+        if len(self.current_directory) < 3:
+            self.current_directory = '/var/www/EntreDevelopersLabSite'
+            self.in_wsgi = True
+
+        self.directory = f"{self.current_directory}/flaskapp{url_for('static', filename='SEOLabReports')}/{self.id}"
 
         try:
             os.mkdir(self.directory)
+            self.new_additions = True
         except FileExistsError:
-            pass
+            self.new_additions = False
 
         # set the variables in the response
         exec(f"self.{endpoint}()")
@@ -34,7 +43,9 @@ class Report:
 
     def test(self):
         # make the response an object to call it later (when creating data forms)
-        self.response = json.loads(open('flaskapp/SEOLab/Responses/_v3_keywords_data_google_keywords_for_site_task_get_apple.json').read())
+        test_data = f"{self.current_directory}/flaskapp/SEOLab/Responses/_v3_keywords_data_google_keywords_for_site_task_get_apple.json"
+
+        self.response = json.loads(open(test_data).read())
 
         # make useful variables for making graphs
 
@@ -84,25 +95,27 @@ class Report:
 
     # make functions to add particular charts depending on the report requested
     def create_horizontal_bar_chart(self, values, labels, title, ylabel, xlabel):
-        sns.set(style="whitegrid", font_scale=1.5)
-        sns.set_color_codes("pastel")
+        file = f"{title}.png"
+        if self.new_additions:
+            sns.set(style="whitegrid", font_scale=1.5)
+            sns.set_color_codes("pastel")
 
-        # Initialize the matplotlib figure
-        plt.rcParams['figure.figsize'] = (len(labels), 10)
-        plt.ylim(100)
+            # Initialize the matplotlib figure
+            plt.rcParams['figure.figsize'] = (len(labels), 10)
+            plt.ylim(100)
 
-        plt.title(title)
-        plt.ylabel(ylabel)
-        plt.xlabel(xlabel)
-        sns.barplot(x=labels, y=values)
+            plt.title(title)
+            plt.ylabel(ylabel)
+            plt.xlabel(xlabel)
+            sns.barplot(x=labels, y=values)
 
-        # save the file to the folder created for the report
-        plot_url = f"{self.directory}/{title}.png"
+            # save the file to the folder created for the report
+            plot_url = f"{self.directory}/{file}"
 
-        plt.savefig(plot_url)
-        plt.close()
+            plt.savefig(plot_url)
+            plt.close()
 
-        return plot_url.replace("flaskapp", "")
+        return url_for('static', filename=f"SEOLabReports/{self.id}/{file}")
 
 
 '''
