@@ -1,8 +1,6 @@
 from flask import render_template, flash, redirect, url_for, send_file, make_response
 from flaskapp import app
-from flaskapp.SEOLab.exporter import Exporter
-from flaskapp.SEOLab.researcher import Report
-import os
+# from flaskapp.SEOLab.researcher import Report
 import pdfkit
 
 MAIN_SITE = 'https://entredeveloperslab.com'
@@ -35,6 +33,7 @@ def leads():
     return render_template('leads.html', title='Leads')
 
 
+'''
 # this just hosts the report for viewing purposes (it will be automatically downloaded as well)
 # can just download this report --> open a new tab for each of the reports (but don't switch to them automatically)
 # ^ do as much as possible in js
@@ -72,3 +71,4 @@ def render_seo_report(report_id, endpoint):
 
     return render_template(f"SEOLabTemplates/{endpoint}.html", report=report, main_site=MAIN_SITE, for_download=False)
     # return report_html
+'''

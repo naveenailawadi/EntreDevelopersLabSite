@@ -17,7 +17,7 @@ CORS(app, supports_credentials=True)
 from flaskapp import routes, api
 
 if __name__ == '__main__':
-    app.run()
+    app.run(threaded=True)
 
 '''
 Further learning:
