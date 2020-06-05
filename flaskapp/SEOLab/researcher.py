@@ -6,6 +6,7 @@ import json
 import seaborn as sns
 import matplotlib.pyplot as plt
 import os
+import numpy as np
 
 
 # create a class that hosts the necessary data
@@ -48,14 +49,18 @@ class Report:
         self.response = json.loads(open(test_data).read())
 
         # make useful variables for making graphs
+        keyword_max = 25
 
         # allow the user to set the number of keywords
-        results = self.response['tasks'][0]['result'][:25]
+        results = self.response['tasks'][0]['result'][:keyword_max]
         self.keywords = [entry['keyword'] for entry in results]
         self.search_volumes = [entry['search_volume'] for entry in results]
         self.cpcs = [entry['cpc'] for entry in results]
         self.competition_ratings = [entry['competition'] * 100 for entry in results]
         self.firepower_ratings = [entry['search_volume'] / entry['competition'] for entry in results]
+
+        # create a dictionary of records
+        self.monthly_search_data = {record['keyword']: record['monthly_searches'] for record in results}
 
         self.location = self.response['tasks'][0]['data']['location_name']
         self.url = self.response['tasks'][0]['data']['target']
@@ -101,7 +106,7 @@ class Report:
             sns.set_color_codes("pastel")
 
             # Initialize the matplotlib figure
-            plt.rcParams['figure.figsize'] = (len(labels), 10)
+            plt.rcParams['figure.figsize'] = (len(self.keywords), 10)
             plt.ylim(200)
 
             plt.title(title)
@@ -117,8 +122,33 @@ class Report:
 
         return url_for('static', filename=f"SEOLabReports/{self.id}/{file}")
 
-    def create_line_graph(self, keyword, title, ylabel, xlabel):
-        stuff = ''
+    def create_line_graph(self, trend_list, label, title, ylabel, xlabel):
+        file = f"{title}.png"
+        print(trend_list)
+        if True:  # self.new_additions:
+            sns.set(style="whitegrid", font_scale=1.5)
+            sns.set_color_codes("pastel")
+
+            # Initialize the matplotlib figure
+            plt.rcParams['figure.figsize'] = (len(self.keywords), 10)
+
+            plt.title(title)
+            plt.ylabel(ylabel)
+            plt.xlabel(xlabel)
+            sns.lineplot(data=trend_list, label=label)
+
+            # save the file to the folder created for the report
+            plot_url = f"{self.directory}/{file}"
+
+            plt.savefig(plot_url)
+            plt.close()
+
+        return url_for('static', filename=f"SEOLabReports/{self.id}/{file}")
+
+    # create a function that returns a list from the
+    def extract_trend(self, key, keyword_records):
+        trend_list = [record[key] for record in keyword_records]
+        return np.flip(np.array(trend_list))
 
 
 '''

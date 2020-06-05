@@ -94,9 +94,9 @@
                 <img id="comparative-research-firepower" src="{{report.create_horizontal_bar_chart(report.keywords, report.firepower_ratings, 'Firepower by Keyword', 'Keywords', 'Firepower')}}">
             </div>
             <!--Output Graphs for each keyword-->
-            {% for keyword in keywords %}
+            {% for keyword in report.keywords[:1] %}
                 <div class="margin" id="individual-reports-{{keyword.replace(' ', '-')}}">
-
+                    <img src="{{report.create_line_graph(report.extract_trend('search_volume', report.monthly_search_data[keyword]), 'Search Volume', 'Search Volume (' + keyword + ')', 'Volume', 'Months')}}">
                 </div>
             {% endfor %}
 
