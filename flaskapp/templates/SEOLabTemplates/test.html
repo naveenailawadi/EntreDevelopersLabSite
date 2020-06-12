@@ -78,7 +78,7 @@
                     <li>
                         <a class="original-hyperlink" href="#individual-reports">Individual Reports</a>
                         <ul>
-                            {% for keyword in report.keywords %}
+                            {% for keyword in report.keywords %} <!--Call some JS functions on all of them-->
                             <li>
                                 <a class="original-hyperlink" href="#individual-reports-{{keyword.replace(' ', '-')}}">{{keyword}}</a>
                             </li>
@@ -99,8 +99,8 @@
                     <img src="{{report.create_line_graph(report.extract_trend('search_volume', report.monthly_search_data[keyword]), 'Search Volume', 'Search Volume (' + keyword + ')', 'Volume', 'Months')}}">
                 </div>
             {% endfor %}
-
         </div>
     </main>
 </body>
+<script src="https://d3js.org/d3.v5.min.js"></script>
 </html>

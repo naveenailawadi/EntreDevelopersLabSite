@@ -171,4 +171,7 @@ NOTES
     - have custom competitor sorting (make it look pretty)
 - current category research reports
     = allow input for category and location --> compile data for competitors
+
+OUTPUT
+- build it with D3.js (going to need it to look better)
 '''
