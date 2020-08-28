@@ -31,45 +31,7 @@ def leads():
     return render_template('leads.html', title='Leads')
 
 
-# this just hosts the report for viewing purposes (it will be automatically downloaded as well)
-# can just download this report --> open a new tab for each of the reports (but don't switch to them automatically)
-# ^ do as much as possible in js
-# make the report ID a keyword argument --> the report object will be able to generate information on it
-@app.route("/download_seo_report/<endpoint>/<report_id>", methods=['GET', 'POST'])
-def download_seo_report(report_id, endpoint):
-    import pdfkit
-    from flaskapp.SEOLab.researcher import Report
-    # eventually this will have less arguments as the API will pull them from the json
-    report = Report(report_id, endpoint)
-
-    report_html = render_template(f"SEOLabTemplates/{endpoint}.html", report=report, main_site=MAIN_SITE, for_download=True)
-
-    # create the pdf and download it
-    options = {
-        'page-size': 'A6',
-        'margin-top': '0.1in',
-        'margin-right': '0.1in',
-        'margin-bottom': '0.1in',
-        'margin-left': '0.1in',
-    }
-    pdf = pdfkit.from_string(report_html, False, options=options)
-
-    # this renders the pdf in the browser
-    response = make_response(pdf)
-    response.headers['Content-Type'] = 'application/pdf'
-
-    # this can be changed to "attachment;" for downloading purposes
-    response.headers['Content-Disposition'] = f"inline; filename={report.id}.pdf"
-
-    return response
-    # return report_html
-
-
-@app.route("/render_seo_report/<endpoint>/<report_id>", methods=['GET', 'POST'])
-def render_seo_report(report_id, endpoint):
-    from flaskapp.SEOLab.researcher import Report
-    # eventually this will have less arguments as the API will pull them from the json
-    report = Report(report_id, endpoint)
-
-    return render_template(f"SEOLabTemplates/{endpoint}.html", report=report, main_site=MAIN_SITE, for_download=False)
-    # return report_html
+# make a way to apply
+@app.route("/apply", methods=['GET', 'POST'])
+def apply():
+    return render_template('apply.html', title='Apply')

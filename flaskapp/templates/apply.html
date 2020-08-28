@@ -1,0 +1,83 @@
+{% extends "layout.html" %}
+
+{% block content %}
+      <!-- Content -->
+      <article>
+        <header class="section background-dark">
+          <div class="line">
+            <h1 class="text-white margin-top-bottom-40 text-size-60 text-line-height-1">Apply</h1>
+            <p class="margin-bottom-0 text-size-16">We are constantly looking for innovators and individuals
+              with a passion for working with entrepreneurs. Send us some information about your experience,
+              a portfolio, and a link to your GitHub. If we are interested, a member of our team will
+              reach out for more information and schedule an interview.
+            </p>
+        </header>
+        <div class="section background-white">
+
+          <div class="line">
+            <div class="margin">
+              <!-- Contact Form -->
+              <div id="formErrors" class="s-12"></div>
+              <div class="s-12 m-12 l-6">
+                <h2 class="margin-bottom-10">Tell us about yourself</h2>
+                <form id="contactForm" name="contactForm" class="customform" method="post">
+                  <div class="line">
+                    <div class="margin">
+                      <div class="s-12">
+                        <input name="name" id="nameField" class="required name" placeholder="Your name" title="Your name" type="text" />
+                        <p class="name-error form-error">Please enter your name.</p>
+                      </div>
+                      <div class="s-12 m-12 l-6">
+                        <input name="email" id="emailField" class="required email" placeholder="Your e-mail" title="Your e-mail" type="text" />
+                        <p class="email-error form-error">Please enter your e-mail.</p>
+                      </div>
+                      <div class="s-12 m-12 l-6">
+                        <input name="phone-number" id="phoneField" class="email" placeholder="Your phone number (optional)" title="Your phone-number" type="text" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="s-12">
+                    <input name="subject" class="subject" id="subjectField" placeholder="GitHub" title="Subject" type="text" />
+                    <p class="subject-error form-error">Please enter your GitHub</p>
+                  </div>
+                  <div class="s-12">
+                    <textarea name="message" class="required message" id="messageField" placeholder="Your message" rows="3"></textarea>
+                    <p class="message-error form-error">Tell us about your experience.</p>
+                  </div>
+                  <!--list of added platforms-->
+                  <div class="s-12">
+                    <ul id="additionalPlatforms"></ul>
+                  </div>
+
+                  <div class="s-12 m-12 l-6">
+                    <ul id="Menu">
+                      <li><a href="#">Additional Platforms</a>
+                        <ul class="dropdown">
+                          <li><a id="add-telegram" onclick="addTextField(this)">Telegram</a></li>
+                          <li><a id="add-discord" onclick="addTextField(this)">Discord</a></li>
+                          <li><a id="add-whatsapp" onclick="addTextField(this)">WhatsApp</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                  {% raw %}
+                    <template id="additionalContactTemplate">
+                        <input class="name" label="additionalPlatform" placeholder="{{method}}" id="{{method}}Field" type="text" />
+                    </template>
+                  {% endraw %}
+
+                  <div class="s-12" id="submitField"><button class="s-12 submit-form button background-primary text-white" type="submit">Send</button></div>
+                </form>
+              </div>
+              <div class="l-6" style="margin-top: 4%; padding-left: 1">
+                <!--some image of the team-->
+                <img src="{{url_for('static', filename='img/apply/collaboration.jpg')}}" class="center" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+        <script language="JavaScript" type="text/javascript" src="{{ url_for('static', filename='js/mustache/mustache.js') }}"></script>
+        <script language="JavaScript" type="text/javascript" src="{{ url_for('static', filename='js/apply.js') }}"></script>
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/contact.css')}}">
+      </article>
+{% endblock content %}
