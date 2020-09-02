@@ -1,3 +1,7 @@
 secrets.py
 *.db
 SEOLabReports/
+
+
+# OG files
+OG/
